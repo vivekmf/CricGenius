@@ -1,0 +1,654 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		929C86DD2B87462E00402D21 /* CricGeniusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86DC2B87462E00402D21 /* CricGeniusApp.swift */; };
+		929C86DF2B87462E00402D21 /* CricGeniusHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86DE2B87462E00402D21 /* CricGeniusHomeView.swift */; };
+		929C86E12B87462F00402D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929C86E02B87462F00402D21 /* Assets.xcassets */; };
+		929C86E52B87462F00402D21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929C86E42B87462F00402D21 /* Preview Assets.xcassets */; };
+		929C86EF2B87462F00402D21 /* CricGeniusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86EE2B87462F00402D21 /* CricGeniusTests.swift */; };
+		929C86F92B87462F00402D21 /* CricGeniusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86F82B87462F00402D21 /* CricGeniusUITests.swift */; };
+		929C86FB2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86FA2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift */; };
+		929C870B2B87509D00402D21 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870A2B87509D00402D21 /* CustomShape.swift */; };
+		929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870C2B876BD900402D21 /* LiveScoreCardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		929C86EB2B87462F00402D21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 929C86D12B87462E00402D21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 929C86D82B87462E00402D21;
+			remoteInfo = CricGenius;
+		};
+		929C86F52B87462F00402D21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 929C86D12B87462E00402D21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 929C86D82B87462E00402D21;
+			remoteInfo = CricGenius;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		929C86D92B87462E00402D21 /* CricGenius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricGenius.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		929C86DC2B87462E00402D21 /* CricGeniusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusApp.swift; sourceTree = "<group>"; };
+		929C86DE2B87462E00402D21 /* CricGeniusHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusHomeView.swift; sourceTree = "<group>"; };
+		929C86E02B87462F00402D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		929C86E22B87462F00402D21 /* CricGenius.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CricGenius.entitlements; sourceTree = "<group>"; };
+		929C86E42B87462F00402D21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		929C86EA2B87462F00402D21 /* CricGeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		929C86EE2B87462F00402D21 /* CricGeniusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusTests.swift; sourceTree = "<group>"; };
+		929C86F42B87462F00402D21 /* CricGeniusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		929C86F82B87462F00402D21 /* CricGeniusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusUITests.swift; sourceTree = "<group>"; };
+		929C86FA2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		929C870A2B87509D00402D21 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		929C870C2B876BD900402D21 /* LiveScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScoreCardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		929C86D62B87462E00402D21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929C86E72B87462F00402D21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929C86F12B87462F00402D21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		929C86D02B87462E00402D21 = {
+			isa = PBXGroup;
+			children = (
+				929C86DB2B87462E00402D21 /* CricGenius */,
+				929C86ED2B87462F00402D21 /* CricGeniusTests */,
+				929C86F72B87462F00402D21 /* CricGeniusUITests */,
+				929C86DA2B87462E00402D21 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		929C86DA2B87462E00402D21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				929C86D92B87462E00402D21 /* CricGenius.app */,
+				929C86EA2B87462F00402D21 /* CricGeniusTests.xctest */,
+				929C86F42B87462F00402D21 /* CricGeniusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		929C86DB2B87462E00402D21 /* CricGenius */ = {
+			isa = PBXGroup;
+			children = (
+				929C87092B8746A200402D21 /* Model */,
+				929C87082B87469900402D21 /* View */,
+				929C87072B87468B00402D21 /* ViewModel */,
+				929C86DC2B87462E00402D21 /* CricGeniusApp.swift */,
+				929C86DE2B87462E00402D21 /* CricGeniusHomeView.swift */,
+				929C86E02B87462F00402D21 /* Assets.xcassets */,
+				929C86E22B87462F00402D21 /* CricGenius.entitlements */,
+				929C86E32B87462F00402D21 /* Preview Content */,
+			);
+			path = CricGenius;
+			sourceTree = "<group>";
+		};
+		929C86E32B87462F00402D21 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				929C86E42B87462F00402D21 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		929C86ED2B87462F00402D21 /* CricGeniusTests */ = {
+			isa = PBXGroup;
+			children = (
+				929C86EE2B87462F00402D21 /* CricGeniusTests.swift */,
+			);
+			path = CricGeniusTests;
+			sourceTree = "<group>";
+		};
+		929C86F72B87462F00402D21 /* CricGeniusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				929C86F82B87462F00402D21 /* CricGeniusUITests.swift */,
+				929C86FA2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift */,
+			);
+			path = CricGeniusUITests;
+			sourceTree = "<group>";
+		};
+		929C87072B87468B00402D21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		929C87082B87469900402D21 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				929C870A2B87509D00402D21 /* CustomShape.swift */,
+				929C870C2B876BD900402D21 /* LiveScoreCardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		929C87092B8746A200402D21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		929C86D82B87462E00402D21 /* CricGenius */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 929C86FE2B87462F00402D21 /* Build configuration list for PBXNativeTarget "CricGenius" */;
+			buildPhases = (
+				929C86D52B87462E00402D21 /* Sources */,
+				929C86D62B87462E00402D21 /* Frameworks */,
+				929C86D72B87462E00402D21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CricGenius;
+			productName = CricGenius;
+			productReference = 929C86D92B87462E00402D21 /* CricGenius.app */;
+			productType = "com.apple.product-type.application";
+		};
+		929C86E92B87462F00402D21 /* CricGeniusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 929C87012B87462F00402D21 /* Build configuration list for PBXNativeTarget "CricGeniusTests" */;
+			buildPhases = (
+				929C86E62B87462F00402D21 /* Sources */,
+				929C86E72B87462F00402D21 /* Frameworks */,
+				929C86E82B87462F00402D21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				929C86EC2B87462F00402D21 /* PBXTargetDependency */,
+			);
+			name = CricGeniusTests;
+			productName = CricGeniusTests;
+			productReference = 929C86EA2B87462F00402D21 /* CricGeniusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		929C86F32B87462F00402D21 /* CricGeniusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 929C87042B87462F00402D21 /* Build configuration list for PBXNativeTarget "CricGeniusUITests" */;
+			buildPhases = (
+				929C86F02B87462F00402D21 /* Sources */,
+				929C86F12B87462F00402D21 /* Frameworks */,
+				929C86F22B87462F00402D21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				929C86F62B87462F00402D21 /* PBXTargetDependency */,
+			);
+			name = CricGeniusUITests;
+			productName = CricGeniusUITests;
+			productReference = 929C86F42B87462F00402D21 /* CricGeniusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		929C86D12B87462E00402D21 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					929C86D82B87462E00402D21 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					929C86E92B87462F00402D21 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 929C86D82B87462E00402D21;
+					};
+					929C86F32B87462F00402D21 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 929C86D82B87462E00402D21;
+					};
+				};
+			};
+			buildConfigurationList = 929C86D42B87462E00402D21 /* Build configuration list for PBXProject "CricGenius" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 929C86D02B87462E00402D21;
+			productRefGroup = 929C86DA2B87462E00402D21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				929C86D82B87462E00402D21 /* CricGenius */,
+				929C86E92B87462F00402D21 /* CricGeniusTests */,
+				929C86F32B87462F00402D21 /* CricGeniusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		929C86D72B87462E00402D21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				929C86E52B87462F00402D21 /* Preview Assets.xcassets in Resources */,
+				929C86E12B87462F00402D21 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929C86E82B87462F00402D21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929C86F22B87462F00402D21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		929C86D52B87462E00402D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				929C86DF2B87462E00402D21 /* CricGeniusHomeView.swift in Sources */,
+				929C86DD2B87462E00402D21 /* CricGeniusApp.swift in Sources */,
+				929C870B2B87509D00402D21 /* CustomShape.swift in Sources */,
+				929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929C86E62B87462F00402D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				929C86EF2B87462F00402D21 /* CricGeniusTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		929C86F02B87462F00402D21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				929C86FB2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift in Sources */,
+				929C86F92B87462F00402D21 /* CricGeniusUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		929C86EC2B87462F00402D21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 929C86D82B87462E00402D21 /* CricGenius */;
+			targetProxy = 929C86EB2B87462F00402D21 /* PBXContainerItemProxy */;
+		};
+		929C86F62B87462F00402D21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 929C86D82B87462E00402D21 /* CricGenius */;
+			targetProxy = 929C86F52B87462F00402D21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		929C86FC2B87462F00402D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		929C86FD2B87462F00402D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		929C86FF2B87462F00402D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CricGenius/CricGenius.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CricGenius/Preview Content\"";
+				DEVELOPMENT_TEAM = H8WK39232A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.CricGenius.CricGenius;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		929C87002B87462F00402D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CricGenius/CricGenius.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CricGenius/Preview Content\"";
+				DEVELOPMENT_TEAM = H8WK39232A;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.CricGenius.CricGenius;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		929C87022B87462F00402D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8WK39232A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.CricGenius.CricGeniusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CricGenius.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CricGenius";
+			};
+			name = Debug;
+		};
+		929C87032B87462F00402D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8WK39232A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.CricGenius.CricGeniusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CricGenius.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CricGenius";
+			};
+			name = Release;
+		};
+		929C87052B87462F00402D21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8WK39232A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.CricGenius.CricGeniusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CricGenius;
+			};
+			name = Debug;
+		};
+		929C87062B87462F00402D21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H8WK39232A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vivek.CricGenius.CricGeniusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CricGenius;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		929C86D42B87462E00402D21 /* Build configuration list for PBXProject "CricGenius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				929C86FC2B87462F00402D21 /* Debug */,
+				929C86FD2B87462F00402D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		929C86FE2B87462F00402D21 /* Build configuration list for PBXNativeTarget "CricGenius" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				929C86FF2B87462F00402D21 /* Debug */,
+				929C87002B87462F00402D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		929C87012B87462F00402D21 /* Build configuration list for PBXNativeTarget "CricGeniusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				929C87022B87462F00402D21 /* Debug */,
+				929C87032B87462F00402D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		929C87042B87462F00402D21 /* Build configuration list for PBXNativeTarget "CricGeniusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				929C87052B87462F00402D21 /* Debug */,
+				929C87062B87462F00402D21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 929C86D12B87462E00402D21 /* Project object */;
+}
