@@ -30,9 +30,9 @@ struct LiveScoreCardView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
             ZStack {
-                CustomShape()
+                LiveScoreCardShape()
                     .fill(Color(red: 0.48, green: 0.82, blue: 0.91))
-                    .frame(width: 260, height: 180)
+                    .frame(width: 260, height: 190)
                     .shadow(color: Color(red: 0.48, green: 0.82, blue: 0.91).opacity(0.2), radius: 5)
                 
                 VStack(alignment: .leading, spacing: 5) {
@@ -93,8 +93,12 @@ struct LiveScoreCardView: View {
                     Text(scorecard.needScore)
                         .font(.system(size: 14))
                 }
-                .padding(75)
+                .padding()
+                .padding(.trailing, 55)
+                .padding(.leading, 30)
             }
+            .padding()
+            .padding(.leading, 10)
             
             Image(systemName: "arrow.forward")
                 .resizable()
@@ -107,10 +111,8 @@ struct LiveScoreCardView: View {
                         .frame(width: 40, height: 40)
                         .shadow(color: Color(red: 0.48, green: 0.82, blue: 0.91).opacity(0.2), radius: 2)
                 )
-                .offset(x: 100, y: -240)
+                .offset(x: 115, y: -210)
         }
-        .padding(.trailing, -30)
-        .padding(.leading, -50)
     }
 }
 #Preview {

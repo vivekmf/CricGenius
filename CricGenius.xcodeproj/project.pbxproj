@@ -14,8 +14,11 @@
 		929C86EF2B87462F00402D21 /* CricGeniusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86EE2B87462F00402D21 /* CricGeniusTests.swift */; };
 		929C86F92B87462F00402D21 /* CricGeniusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86F82B87462F00402D21 /* CricGeniusUITests.swift */; };
 		929C86FB2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86FA2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift */; };
-		929C870B2B87509D00402D21 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870A2B87509D00402D21 /* CustomShape.swift */; };
+		929C870B2B87509D00402D21 /* LiveScoreCardShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870A2B87509D00402D21 /* LiveScoreCardShape.swift */; };
 		929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870C2B876BD900402D21 /* LiveScoreCardView.swift */; };
+		92CD0A202B886F23006E5B0B /* UpcomingMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */; };
+		92CD0A222B887E52006E5B0B /* TopStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A212B887E52006E5B0B /* TopStoriesView.swift */; };
+		92CD0A242B88B1B0006E5B0B /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,8 +50,11 @@
 		929C86F42B87462F00402D21 /* CricGeniusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		929C86F82B87462F00402D21 /* CricGeniusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusUITests.swift; sourceTree = "<group>"; };
 		929C86FA2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		929C870A2B87509D00402D21 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
+		929C870A2B87509D00402D21 /* LiveScoreCardShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScoreCardShape.swift; sourceTree = "<group>"; };
 		929C870C2B876BD900402D21 /* LiveScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScoreCardView.swift; sourceTree = "<group>"; };
+		92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchView.swift; sourceTree = "<group>"; };
+		92CD0A212B887E52006E5B0B /* TopStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesView.swift; sourceTree = "<group>"; };
+		92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +152,11 @@
 		929C87082B87469900402D21 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				929C870A2B87509D00402D21 /* CustomShape.swift */,
+				929C870A2B87509D00402D21 /* LiveScoreCardShape.swift */,
 				929C870C2B876BD900402D21 /* LiveScoreCardView.swift */,
+				92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */,
+				92CD0A212B887E52006E5B0B /* TopStoriesView.swift */,
+				92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -289,9 +298,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92CD0A202B886F23006E5B0B /* UpcomingMatchView.swift in Sources */,
 				929C86DF2B87462E00402D21 /* CricGeniusHomeView.swift in Sources */,
+				92CD0A242B88B1B0006E5B0B /* BottomNavigationView.swift in Sources */,
+				92CD0A222B887E52006E5B0B /* TopStoriesView.swift in Sources */,
 				929C86DD2B87462E00402D21 /* CricGeniusApp.swift in Sources */,
-				929C870B2B87509D00402D21 /* CustomShape.swift in Sources */,
+				929C870B2B87509D00402D21 /* LiveScoreCardShape.swift in Sources */,
 				929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
