@@ -7,13 +7,6 @@
 import Foundation
 import SwiftUI
 
-//struct BottomNavigationMenuItem: Identifiable, Equatable {
-//    let id = UUID()
-//    let imageName: String
-//    let itemName: String
-//    var isSelected: Bool = false // Add isSelected property with default value
-//}
-
 struct CricGeniusHomeView: View {
     // Sample data for demonstration
     let scorecards = [
@@ -23,9 +16,10 @@ struct CricGeniusHomeView: View {
     ]
     
     let upcomingMatches: [UpcomingMatch] = [
-        UpcomingMatch(homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "01:00 PM", matchDate: "01-Feb-2024", venue: "MCG, Australia"),
-        UpcomingMatch(homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "03:30 PM", matchDate: "03-Feb-2024", venue: "Eden Gardens, India"),
-        UpcomingMatch(homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "06:00 PM", matchDate: "05-Feb-2024", venue: "Lords, England")
+        UpcomingMatch(team1: "Chennai Super Kings", team2: "Gujarat Titans", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "08:00 PM", matchDate: "01-Feb-2024", venue: "Narendra Modi Stadium, Ahmedabad"),
+        UpcomingMatch(team1: "India", team2: "England", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "01:00 PM", matchDate: "01-Feb-2024", venue: "MCG, Australia"),
+        UpcomingMatch(team1: "India", team2: "England", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "03:30 PM", matchDate: "03-Feb-2024", venue: "Eden Gardens, India"),
+        UpcomingMatch(team1: "India", team2: "England", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "06:00 PM", matchDate: "05-Feb-2024", venue: "Lords, England")
     ]
     
     let topStories: [TopStories] = [
@@ -83,6 +77,7 @@ struct CricGeniusHomeView: View {
                     HStack(spacing: 20) {
                         ForEach(upcomingMatches) { match in
                             UpcomingMatchView(
+                                team1: match.team1, team2: match.team2,
                                 homeTeamImage: match.homeTeamImage,
                                 awayTeamImage: match.awayTeamImage,
                                 matchTime: match.matchTime,

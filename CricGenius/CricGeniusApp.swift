@@ -11,7 +11,9 @@ import SwiftUI
 struct CricGeniusApp: App {
     var body: some Scene {
         WindowGroup {
-            CricGeniusHomeView()
+            NavigationView {
+                CricGeniusHomeView()
+            }
         }
     }
 }
