@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import CoreML
 
-func winnerPredict() -> Ipl2023MatchesModelOutput? {
+func iplMatches2023Data() -> Ipl2023MatchesModelOutput? {
     do {
         let config = MLModelConfiguration()
         
@@ -24,7 +24,7 @@ func winnerPredict() -> Ipl2023MatchesModelOutput? {
     return nil
 }
 
-func winnerPredictTest(team1: String, team2: String, tossWinner: String, dayNight: String, tossDecision: String ,venue: String, country: String) -> Ipl2023MatchesTestOutput? {
+func ipl2023WinnerPredict(team1: String, team2: String, tossWinner: String, dayNight: String, tossDecision: String ,venue: String, country: String) -> Ipl2023MatchesTestOutput? {
     do {
         let config = MLModelConfiguration()
         
@@ -39,7 +39,7 @@ func winnerPredictTest(team1: String, team2: String, tossWinner: String, dayNigh
     return nil
 }
 
-func iplWinnerPredictOld() -> Ipl20082023MatchDataOutput? {
+func ipl2008To2020Data() -> Ipl20082023MatchDataOutput? {
     do {
         let config = MLModelConfiguration()
         
@@ -65,6 +65,20 @@ func iplWinnerFinalPredict() -> Ipl2020FinalPredictOutput? {
     }
 }
 
+func odiMens2002To2023Data() -> ODIMensCricketMatch2002To2023Output? {
+    do {
+        let config = MLModelConfiguration()
+        
+        let winnerModel = try ODIMensCricketMatch2002To2023(configuration: config)
+        
+        let winnerPrediction = try winnerModel.prediction(city: "Rajkot", team1: "India", team2: "Australia", toss_winner: "Australia", toss_decision: "bat", venue: "Saurashtra Cricket Association Stadium")
+        
+        return winnerPrediction
+    }catch{
+        return nil
+    }
+}
+
 struct WinnerPredictionView: View {
     let team1: String
     let team2: String
@@ -75,8 +89,8 @@ struct WinnerPredictionView: View {
     let country: String
     
     var body: some View {
-        let winnerPredictClass = winnerPredictTest(team1: team1, team2: team2, tossWinner: tossWinner, dayNight: dayNight, tossDecision: tossDecision, venue: venue, country: country)?.winner
-        let winnerProbabilityClass = winnerPredictTest(team1: team1, team2: team2, tossWinner: tossWinner, dayNight: dayNight, tossDecision: tossDecision, venue: venue, country: country)?.winnerProbability
+        let winnerPredictClass = ipl2023WinnerPredict(team1: team1, team2: team2, tossWinner: tossWinner, dayNight: dayNight, tossDecision: tossDecision, venue: venue, country: country)?.winner
+        let winnerProbabilityClass = ipl2023WinnerPredict(team1: team1, team2: team2, tossWinner: tossWinner, dayNight: dayNight, tossDecision: tossDecision, venue: venue, country: country)?.winnerProbability
         
         return VStack {
             Text("Winner of IPL 2023")
