@@ -16,17 +16,17 @@ class TargetObject: Object {
 
 // Define a separate Codable struct for decoding JSON
 struct Target: Codable {
-    let overs: Int?
-    let runs: Int?
+    var overs: Int = 0
+    var runs: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case overs
         case runs
     }
-
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        overs = try values.decodeIfPresent(Int.self, forKey: .overs)
-        runs = try values.decodeIfPresent(Int.self, forKey: .runs)
+        overs = try values.decodeIfPresent(Int.self, forKey: .overs) ?? 0
+        runs = try values.decodeIfPresent(Int.self, forKey: .runs) ?? 0
     }
 }

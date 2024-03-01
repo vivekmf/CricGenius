@@ -20,14 +20,14 @@ struct Innings: Codable {
     let overs: [Overs]?
     let powerplays: [Powerplays]?
     let target: Target?
-
+    
     enum CodingKeys: String, CodingKey {
         case team
         case overs
         case powerplays
         case target
     }
-
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         team = try values.decodeIfPresent(String.self, forKey: .team)

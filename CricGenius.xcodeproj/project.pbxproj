@@ -43,6 +43,7 @@
 		92BA8DF52B8DED16008A0C23 /* Ipl2020FinalPredict.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92BA8DF42B8DED16008A0C23 /* Ipl2020FinalPredict.mlmodel */; };
 		92BA8DF72B8DEE38008A0C23 /* WinnerPredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BA8DF62B8DEE38008A0C23 /* WinnerPredictionView.swift */; };
 		92BA8DFB2B8E18B0008A0C23 /* ODIMensCricketMatch2002To2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92BA8DFA2B8E18B0008A0C23 /* ODIMensCricketMatch2002To2023.mlmodel */; };
+		92C0E01D2B91B2360016123D /* 1412312.json in Resources */ = {isa = PBXBuildFile; fileRef = 92C0E01C2B91B2360016123D /* 1412312.json */; };
 		92CD0A202B886F23006E5B0B /* UpcomingMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */; };
 		92CD0A222B887E52006E5B0B /* TopStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A212B887E52006E5B0B /* TopStoriesView.swift */; };
 		92CD0A242B88B1B0006E5B0B /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */; };
@@ -105,6 +106,7 @@
 		92C0903F2B8EE67500920670 /* CricGenius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricGenius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C090402B8EE67500920670 /* CricGeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C090412B8EE67500920670 /* CricGeniusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92C0E01C2B91B2360016123D /* 1412312.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1412312.json; sourceTree = "<group>"; };
 		92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchView.swift; sourceTree = "<group>"; };
 		92CD0A212B887E52006E5B0B /* TopStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesView.swift; sourceTree = "<group>"; };
 		92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				92AE96B02B905BD100D4A799 /* RealmManager.swift */,
 				92AE96F72B90689E00D4A799 /* RealmDataManager.swift */,
+				92C0E01C2B91B2360016123D /* 1412312.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				929C86E52B87462F00402D21 /* Preview Assets.xcassets in Resources */,
+				92C0E01D2B91B2360016123D /* 1412312.json in Resources */,
 				929C86E12B87462F00402D21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

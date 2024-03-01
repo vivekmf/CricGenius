@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class MetaObject: Object {
+    @Persisted var id = ObjectId()
     @Persisted var data_version: String?
     @Persisted var created: String?
     @Persisted var revision: Int?

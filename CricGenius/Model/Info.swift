@@ -19,7 +19,7 @@ class InfoObject: Object {
     @Persisted var outcome: OutcomeObject?
     @Persisted var overs: Int?
     @Persisted var player_of_match = List<String>()
-    @Persisted var players = PlayerObject()
+    @Persisted var players = List<PlayerObject>()
     @Persisted var registry: RegistryObject?
     @Persisted var season: String?
     @Persisted var team_type: String?
@@ -39,14 +39,14 @@ struct Info: Codable {
     let outcome: Outcome?
     let overs: Int?
     let player_of_match: [String]?
-    let players: Player?
+    let players: [String: [String]]?
     let registry: Registry?
     let season: String?
     let team_type: String?
     let teams: [String]?
     let toss: Toss?
     let venue: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case balls_per_over
         case city
@@ -66,7 +66,7 @@ struct Info: Codable {
         case toss
         case venue
     }
-
+    
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         balls_per_over = try values.decodeIfPresent(Int.self, forKey: .balls_per_over)
@@ -79,7 +79,11 @@ struct Info: Codable {
         outcome = try values.decodeIfPresent(Outcome.self, forKey: .outcome)
         overs = try values.decodeIfPresent(Int.self, forKey: .overs)
         player_of_match = try values.decodeIfPresent([String].self, forKey: .player_of_match)
-        players = try values.decodeIfPresent(Player.self, forKey: .players)
+        players = try values.decodeIfPresent([String: [String]].self, forKey: .players)?.reduce(into: [String: [String]]()) { result, pair in
+            let teamName = pair.key
+            let players = pair.value
+            result[teamName] = players
+        } ?? [:]
         registry = try values.decodeIfPresent(Registry.self, forKey: .registry)
         season = try values.decodeIfPresent(String.self, forKey: .season)
         team_type = try values.decodeIfPresent(String.self, forKey: .team_type)

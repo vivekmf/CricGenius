@@ -37,17 +37,21 @@ struct CricGeniusHomeView: View {
     var body: some View {
         VStack {
             // Top Header of home page
-            HStack {
-                Image(systemName: "line.horizontal.3")
-                    .resizable()
-                    .frame(width: 25, height: 20)
-                    .foregroundStyle(Color.white)
-                Spacer()
-                Image("profile_img")
-                    .resizable()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.gray))
+            Button(action: {
+                RealmDataManager.readAndStoreJSONData()
+            }) {
+                HStack {
+                    Image(systemName: "line.horizontal.3")
+                        .resizable()
+                        .frame(width: 25, height: 20)
+                        .foregroundStyle(Color.white)
+                    Spacer()
+                    Image("profile_img")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.gray))
+                }
             }
             
             // Live Match Score Card Section
