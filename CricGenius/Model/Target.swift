@@ -11,13 +11,13 @@ import RealmSwift
 // Define your Realm model
 class TargetObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
-    @Persisted var overs: Int = 0
+    @Persisted var overs: Double = 0
     @Persisted var runs: Int = 0
 }
 
 // Define a separate Codable struct for decoding JSON
 struct Target: Codable {
-    var overs: Int = 0
+    var overs: Double = 0
     var runs: Int = 0
     
     enum CodingKeys: String, CodingKey {
@@ -27,7 +27,11 @@ struct Target: Codable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        overs = try values.decodeIfPresent(Int.self, forKey: .overs) ?? 0
+        if let intOvers = try? values.decode(Int.self, forKey: .overs) {
+            overs = Double(intOvers)
+        } else {
+            overs = try values.decodeIfPresent(Double.self, forKey: .overs) ?? 0
+        }
         runs = try values.decodeIfPresent(Int.self, forKey: .runs) ?? 0
     }
 }

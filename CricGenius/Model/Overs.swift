@@ -10,12 +10,12 @@ import RealmSwift
 
 class OversObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
-    @Persisted var over: Int?
+    @Persisted var over: Double?
     @Persisted var deliveries = List<DeliveriesObject>()
 }
 
 struct Overs : Codable {
-    let over : Int?
+    let over : Double?
     let deliveries : [Deliveries]?
     
     enum CodingKeys: String, CodingKey {
@@ -26,7 +26,11 @@ struct Overs : Codable {
     
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        over = try values.decodeIfPresent(Int.self, forKey: .over)
+        if let intOver = try? values.decode(Int.self, forKey: .over) {
+            over = Double(intOver) // Convert the Int to Double
+        } else {
+            over = try values.decodeIfPresent(Double.self, forKey: .over)
+        }
         deliveries = try values.decodeIfPresent([Deliveries].self, forKey: .deliveries)
     }
     

@@ -18,7 +18,7 @@ class InfoObject: Object {
     @Persisted var match_type: String?
     @Persisted var officials: OfficialsObject?
     @Persisted var outcome: OutcomeObject?
-    @Persisted var overs: Int?
+    @Persisted var overs: Double?
     @Persisted var player_of_match = List<String>()
     @Persisted var players = List<PlayerObject>()
     @Persisted var registry: RegistryObject?
@@ -38,7 +38,7 @@ struct Info: Codable {
     let match_type: String?
     let officials: Officials?
     let outcome: Outcome?
-    let overs: Int?
+    let overs: Double?
     let player_of_match: [String]?
     let players: [String: [String]]?
     let registry: Registry?
@@ -78,7 +78,11 @@ struct Info: Codable {
         match_type = try values.decodeIfPresent(String.self, forKey: .match_type)
         officials = try values.decodeIfPresent(Officials.self, forKey: .officials)
         outcome = try values.decodeIfPresent(Outcome.self, forKey: .outcome)
-        overs = try values.decodeIfPresent(Int.self, forKey: .overs)
+        if let intOver = try values.decodeIfPresent(Int.self, forKey: .overs) {
+            overs = Double(intOver)
+        } else {
+            overs = try values.decodeIfPresent(Double.self, forKey: .overs)
+        }
         player_of_match = try values.decodeIfPresent([String].self, forKey: .player_of_match)
         players = try values.decodeIfPresent([String: [String]].self, forKey: .players)?.reduce(into: [String: [String]]()) { result, pair in
             let teamName = pair.key
