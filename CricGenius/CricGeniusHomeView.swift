@@ -38,7 +38,19 @@ struct CricGeniusHomeView: View {
         VStack {
             // Top Header of home page
             Button(action: {
-                RealmDataManager.readAndStoreJSONData()
+                //                RealmDataManager.readAndStoreJSONData()
+                let directoryURL = URL(fileURLWithPath: "/Users/nishantshah/Downloads/CricketData/all_json")
+                
+                do {
+                    let fileURLs = try FileManager.default.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil)
+                        .filter { $0.pathExtension == "json" }
+                    for fileURL in fileURLs {
+                        RealmDataManager.readAndStoreJSONData(from: fileURL)
+                    }
+                } catch {
+                    print("Error accessing directory: \(error)")
+                }
+                
             }) {
                 HStack {
                     Image(systemName: "line.horizontal.3")

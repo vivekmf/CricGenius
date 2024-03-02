@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class InfoObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var balls_per_over: Int?
     @Persisted var city: String?
     @Persisted var dates = List<String>()
@@ -85,7 +86,11 @@ struct Info: Codable {
             result[teamName] = players
         } ?? [:]
         registry = try values.decodeIfPresent(Registry.self, forKey: .registry)
-        season = try values.decodeIfPresent(String.self, forKey: .season)
+        if let intSeason = try? values.decode(Int.self, forKey: .season) {
+            season = String(intSeason)
+        } else {
+            season = try values.decodeIfPresent(String.self, forKey: .season)
+        }
         team_type = try values.decodeIfPresent(String.self, forKey: .team_type)
         teams = try values.decodeIfPresent([String].self, forKey: .teams)
         toss = try values.decodeIfPresent(Toss.self, forKey: .toss)

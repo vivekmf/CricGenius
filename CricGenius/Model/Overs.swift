@@ -9,8 +9,9 @@ import Foundation
 import RealmSwift
 
 class OversObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var over: Int?
-    @Persisted var deliveries = List<String>()
+    @Persisted var deliveries = List<DeliveriesObject>()
 }
 
 struct Overs : Codable {

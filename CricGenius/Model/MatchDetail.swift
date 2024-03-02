@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class MatchDetailObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var meta: MetaObject?
     @Persisted var info: InfoObject?
     @Persisted var innings = List<InningsObject>()

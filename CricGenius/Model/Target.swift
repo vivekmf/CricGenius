@@ -10,6 +10,7 @@ import RealmSwift
 
 // Define your Realm model
 class TargetObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var overs: Int = 0
     @Persisted var runs: Int = 0
 }

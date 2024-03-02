@@ -10,6 +10,7 @@ import RealmSwift
 
 // Define your Realm model
 class RegistryObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var people = List<PeopleObject>()
 }
 

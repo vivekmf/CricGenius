@@ -10,9 +10,11 @@ import SwiftUI
 import RealmSwift
 
 class TossObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var decision: String?
     @Persisted var winner: String?
 }
+
 struct Toss : Codable {
     let decision : String?
     let winner : String?

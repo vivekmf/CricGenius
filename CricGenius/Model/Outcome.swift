@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class OutcomeObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var winner: String?
     @Persisted var runs: Int?
     @Persisted var wickets: Int?

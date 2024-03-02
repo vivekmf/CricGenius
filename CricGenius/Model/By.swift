@@ -9,6 +9,7 @@ import Foundation
 import RealmSwift
 
 class ByObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var runs: Int?
 }
 

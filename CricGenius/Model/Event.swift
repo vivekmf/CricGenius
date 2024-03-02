@@ -9,9 +9,11 @@ import Foundation
 import RealmSwift
 
 class EventObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var name: String?
     @Persisted var match_number: Int?
 }
+
 struct Event : Codable {
 	let name : String?
 	let match_number : Int?

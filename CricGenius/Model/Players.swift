@@ -10,8 +10,9 @@ import RealmSwift
 
 // Define Realm model for TeamObject
 class PlayerObject: Object {
+    @Persisted(primaryKey: true) var id = UUID()
     @Persisted var teamName: String?
-    let players = List<String>()
+    @Persisted var players = List<String>()
 }
 
 // Define a separate Codable struct for Team

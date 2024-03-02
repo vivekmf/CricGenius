@@ -9,9 +9,10 @@ import Foundation
 import RealmSwift
 
 class PowerplaysObject: Object {
-    @Persisted var from: List<String>
-    @Persisted var to: List<String>
-    @Persisted var type: List<String>
+    @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var from: Double?
+    @Persisted var to: Double?
+    @Persisted var type: String?
 }
 
 struct Powerplays : Codable {
