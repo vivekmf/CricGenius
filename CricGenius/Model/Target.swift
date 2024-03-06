@@ -11,6 +11,7 @@ import RealmSwift
 // Define your Realm model
 class TargetObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var overs: Double = 0
     @Persisted var runs: Int = 0
 }

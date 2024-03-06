@@ -11,6 +11,7 @@ import RealmSwift
 
 class RunsObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var batter: Int?
     @Persisted var extras: Int?
     @Persisted var total: Int?

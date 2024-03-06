@@ -10,6 +10,7 @@ import RealmSwift
 
 class PowerplaysObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var from: Double?
     @Persisted var to: Double?
     @Persisted var type: String?

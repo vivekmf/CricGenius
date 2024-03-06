@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9291FC8E2B9887C400727257 /* IPL2024Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291FC8D2B9887C400727257 /* IPL2024Schedule.swift */; };
+		9291FC902B9897DE00727257 /* TeamPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291FC8F2B9897DE00727257 /* TeamPlayers.swift */; };
+		9291FC922B98A3CB00727257 /* IPLTeams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9291FC912B98A3CB00727257 /* IPLTeams.swift */; };
 		929C86DD2B87462E00402D21 /* CricGeniusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86DC2B87462E00402D21 /* CricGeniusApp.swift */; };
 		929C86DF2B87462E00402D21 /* CricGeniusHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86DE2B87462E00402D21 /* CricGeniusHomeView.swift */; };
 		929C86E12B87462F00402D21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 929C86E02B87462F00402D21 /* Assets.xcassets */; };
@@ -43,7 +46,6 @@
 		92BA8DF52B8DED16008A0C23 /* Ipl2020FinalPredict.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92BA8DF42B8DED16008A0C23 /* Ipl2020FinalPredict.mlmodel */; };
 		92BA8DF72B8DEE38008A0C23 /* WinnerPredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BA8DF62B8DEE38008A0C23 /* WinnerPredictionView.swift */; };
 		92BA8DFB2B8E18B0008A0C23 /* ODIMensCricketMatch2002To2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92BA8DFA2B8E18B0008A0C23 /* ODIMensCricketMatch2002To2023.mlmodel */; };
-		92C0E01D2B91B2360016123D /* 1412312.json in Resources */ = {isa = PBXBuildFile; fileRef = 92C0E01C2B91B2360016123D /* 1412312.json */; };
 		92CD0A202B886F23006E5B0B /* UpcomingMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */; };
 		92CD0A222B887E52006E5B0B /* TopStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A212B887E52006E5B0B /* TopStoriesView.swift */; };
 		92CD0A242B88B1B0006E5B0B /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */; };
@@ -67,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9291FC8D2B9887C400727257 /* IPL2024Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPL2024Schedule.swift; sourceTree = "<group>"; };
+		9291FC8F2B9897DE00727257 /* TeamPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPlayers.swift; sourceTree = "<group>"; };
+		9291FC912B98A3CB00727257 /* IPLTeams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPLTeams.swift; sourceTree = "<group>"; };
 		929C86DC2B87462E00402D21 /* CricGeniusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusApp.swift; sourceTree = "<group>"; };
 		929C86DE2B87462E00402D21 /* CricGeniusHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusHomeView.swift; sourceTree = "<group>"; };
 		929C86E02B87462F00402D21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -106,7 +111,6 @@
 		92C0903F2B8EE67500920670 /* CricGenius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricGenius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C090402B8EE67500920670 /* CricGeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C090412B8EE67500920670 /* CricGeniusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		92C0E01C2B91B2360016123D /* 1412312.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1412312.json; sourceTree = "<group>"; };
 		92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchView.swift; sourceTree = "<group>"; };
 		92CD0A212B887E52006E5B0B /* TopStoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesView.swift; sourceTree = "<group>"; };
 		92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomNavigationView.swift; sourceTree = "<group>"; };
@@ -139,6 +143,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9291FC8C2B9887A700727257 /* IPLDataSet */ = {
+			isa = PBXGroup;
+			children = (
+				9291FC8D2B9887C400727257 /* IPL2024Schedule.swift */,
+				9291FC8F2B9897DE00727257 /* TeamPlayers.swift */,
+				9291FC912B98A3CB00727257 /* IPLTeams.swift */,
+			);
+			path = IPLDataSet;
+			sourceTree = "<group>";
+		};
 		929C86D02B87462E00402D21 = {
 			isa = PBXGroup;
 			children = (
@@ -219,7 +233,6 @@
 			children = (
 				92AE96B02B905BD100D4A799 /* RealmManager.swift */,
 				92AE96F72B90689E00D4A799 /* RealmDataManager.swift */,
-				92C0E01C2B91B2360016123D /* 1412312.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -227,6 +240,7 @@
 		92AE96D62B9061DA00D4A799 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9291FC8C2B9887A700727257 /* IPLDataSet */,
 				92AE96E62B9063BF00D4A799 /* By.swift */,
 				92AE96D82B9063BF00D4A799 /* Deliveries.swift */,
 				92AE96E42B9063BF00D4A799 /* Event.swift */,
@@ -380,7 +394,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				929C86E52B87462F00402D21 /* Preview Assets.xcassets in Resources */,
-				92C0E01D2B91B2360016123D /* 1412312.json in Resources */,
 				929C86E12B87462F00402D21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,6 +436,7 @@
 				92AE96FA2B90BA2C00D4A799 /* Target.swift in Sources */,
 				92AE96E92B9063BF00D4A799 /* Officials.swift in Sources */,
 				92AE96F82B90689E00D4A799 /* RealmDataManager.swift in Sources */,
+				9291FC922B98A3CB00727257 /* IPLTeams.swift in Sources */,
 				929C86DD2B87462E00402D21 /* CricGeniusApp.swift in Sources */,
 				92AE96EB2B9063BF00D4A799 /* Overs.swift in Sources */,
 				92AE96ED2B9063BF00D4A799 /* People.swift in Sources */,
@@ -431,12 +445,14 @@
 				929C870B2B87509D00402D21 /* LiveScoreCardShape.swift in Sources */,
 				929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */,
 				92BA8DFB2B8E18B0008A0C23 /* ODIMensCricketMatch2002To2023.mlmodel in Sources */,
+				9291FC902B9897DE00727257 /* TeamPlayers.swift in Sources */,
 				92AE96F52B9063BF00D4A799 /* MatchDetail.swift in Sources */,
 				92BA8DF72B8DEE38008A0C23 /* WinnerPredictionView.swift in Sources */,
 				92AE96F02B9063BF00D4A799 /* Runs.swift in Sources */,
 				92AE96EE2B9063BF00D4A799 /* Players.swift in Sources */,
 				92AE96F12B9063BF00D4A799 /* Toss.swift in Sources */,
 				92AE96F22B9063BF00D4A799 /* Outcome.swift in Sources */,
+				9291FC8E2B9887C400727257 /* IPL2024Schedule.swift in Sources */,
 				92AE96E72B9063BF00D4A799 /* Innings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

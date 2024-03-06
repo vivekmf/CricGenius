@@ -29,9 +29,9 @@ struct CricGeniusHomeView: View {
     
     @State private var bottomMenuItems: [BottomNavigationMenuItem] = [
         BottomNavigationMenuItem(imageName: "house.fill", itemName: "Home", isSelected: true),
-        BottomNavigationMenuItem(imageName: "figure.cricket", itemName: "Matches"),
-        BottomNavigationMenuItem(imageName: "message.fill", itemName: "Messages"),
-        BottomNavigationMenuItem(imageName: "person.fill", itemName: "Profile")
+//        BottomNavigationMenuItem(imageName: "figure.cricket", itemName: "Matches"),
+//        BottomNavigationMenuItem(imageName: "message.fill", itemName: "Messages"),
+//        BottomNavigationMenuItem(imageName: "person.fill", itemName: "Profile")
     ]
     
     var body: some View {
@@ -39,7 +39,7 @@ struct CricGeniusHomeView: View {
             // Top Header of home page
             Button(action: {
                 //                RealmDataManager.readAndStoreJSONData()
-                let directoryURL = URL(fileURLWithPath: "/Users/nishantshah/Downloads/CricketData/all_json")
+                let directoryURL = URL(fileURLWithPath: "/Users/nishantshah/Downloads/CricketData/ipl_json")
                 
                 do {
                     let fileURLs = try FileManager.default.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil)

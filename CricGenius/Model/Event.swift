@@ -10,6 +10,7 @@ import RealmSwift
 
 class EventObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var name: String?
     @Persisted var match_number: Int?
 }

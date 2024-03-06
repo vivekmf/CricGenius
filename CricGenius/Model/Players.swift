@@ -11,6 +11,7 @@ import RealmSwift
 // Define Realm model for TeamObject
 class PlayerObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var teamName: String?
     @Persisted var players = List<String>()
 }

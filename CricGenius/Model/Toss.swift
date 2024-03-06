@@ -11,6 +11,7 @@ import RealmSwift
 
 class TossObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var decision: String?
     @Persisted var winner: String?
 }

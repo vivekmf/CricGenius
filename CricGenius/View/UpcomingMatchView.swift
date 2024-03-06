@@ -32,7 +32,6 @@ struct UpcomingMatchView: View {
         let formatter = DateFormatter()
         formatter.dateFormat = "hh:mm a"
         if let time = formatter.date(from: matchTime) {
-            // Assuming daytime is before 6 PM
             let calendar = Calendar.current
             let hour = calendar.component(.hour, from: time)
             return hour < 18 ? "Day/Night" : "Night"
@@ -97,7 +96,7 @@ struct UpcomingMatchView: View {
                             .foregroundStyle(Color.gray)
                             .multilineTextAlignment(.trailing)
                             .fixedSize(horizontal: false, vertical: true)
-                            .frame(maxWidth: 150, maxHeight: .infinity, alignment: .trailing) // Set maxHeight to .infinity for equal height
+                            .frame(maxWidth: 150, maxHeight: .infinity, alignment: .trailing)
                             .padding(.top, 2)
                     }
                     .padding(20)

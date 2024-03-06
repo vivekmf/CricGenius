@@ -10,6 +10,7 @@ import RealmSwift
 
 class InfoObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var balls_per_over: Int?
     @Persisted var city: String?
     @Persisted var dates = List<String>()

@@ -10,6 +10,7 @@ import RealmSwift
 
 class OfficialsObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var matchReferees = List<String>()
     @Persisted var reserveUmpires = List<String>()
     @Persisted var tvUmpires = List<String>()

@@ -10,6 +10,7 @@ import RealmSwift
 
 class InningsObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var team: String?
     @Persisted var overs = List<OversObject>()
     @Persisted var powerplays = List<PowerplaysObject>()

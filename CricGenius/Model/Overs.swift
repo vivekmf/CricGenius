@@ -10,6 +10,7 @@ import RealmSwift
 
 class OversObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var over: Double?
     @Persisted var deliveries = List<DeliveriesObject>()
 }

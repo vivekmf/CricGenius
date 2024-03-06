@@ -10,6 +10,7 @@ import RealmSwift
 
 class DeliveriesObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var batter: String?
     @Persisted var bowler: String?
     @Persisted var non_striker: String?

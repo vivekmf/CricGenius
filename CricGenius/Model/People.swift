@@ -10,6 +10,7 @@ import RealmSwift
 
 class PeopleObject: Object {
     @Persisted(primaryKey: true) var id = UUID()
+    @Persisted var matchId: UUID?
     @Persisted var players: List<String>
 }
 
