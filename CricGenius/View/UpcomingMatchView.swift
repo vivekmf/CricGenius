@@ -21,40 +21,21 @@ struct UpcomingMatch: Identifiable {
 
 struct UpcomingMatchView: View {
     
-    var team1: String
-    var team2: String
-    var homeTeamImage: String
-    var awayTeamImage: String
-    var matchTime: String
-    var matchDate: String
-    var venue: String
-    var dayNight: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm a"
-        if let time = formatter.date(from: matchTime) {
-            let calendar = Calendar.current
-            let hour = calendar.component(.hour, from: time)
-            return hour < 18 ? "Day/Night" : "Night"
-        }
-        return "Day/Night"
-    }
-    var tossWinner: String = "Chennai Super Kings"
-    var tossDecision: String = "field"
-    var country: String = "India"
+    var matchSchedule: UpcomingMatchSchedule
     
     var body: some View {
-        NavigationLink(destination: WinnerPredictionView(team1: team1, team2: team2, tossWinner: tossWinner, dayNight: dayNight, tossDecision: tossDecision, venue: venue, country: country)) {
+        NavigationLink(destination: UpcomingMatchDetailView(matchSchedule: matchSchedule)) {
             VStack(alignment:.leading) {
                 HStack {
                     VStack(alignment:.center) {
-                        Image(homeTeamImage)
+                        Image(matchSchedule.homeTeam.flagImage)
                             .resizable()
                             .frame(width: 32, height: 32)
                             .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.gray))
+                            .overlay(Circle().stroke(Color.green))
                             .padding(.bottom, 0)
                         
-                        Text(team1)
+                        Text(matchSchedule.homeTeam.shortName)
                             .font(.system(size: 12))
                             .foregroundStyle(Color.black)
                             .padding(.bottom, 2)
@@ -64,14 +45,14 @@ struct UpcomingMatchView: View {
                             .foregroundStyle(Color.gray)
                             .padding(.bottom, 2)
                         
-                        Image(awayTeamImage)
+                        Image(matchSchedule.awayTeam.flagImage)
                             .resizable()
                             .frame(width: 32, height: 32)
                             .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.gray))
+                            .overlay(Circle().stroke(Color.red))
                             .padding(.bottom, 0)
                         
-                        Text(team2)
+                        Text(matchSchedule.awayTeam.shortName)
                             .font(.system(size: 12))
                             .foregroundStyle(Color.black)
                             .padding(.bottom, 2)
@@ -81,17 +62,17 @@ struct UpcomingMatchView: View {
                     Spacer()
                     
                     VStack(alignment:.trailing) {
-                        Text(matchTime)
+                        Text(matchSchedule.time)
                             .font(.system(size: 18))
                             .bold()
                             .foregroundStyle(Color.black)
                             .padding(.bottom, 15)
                         
-                        Text(matchDate)
+                        Text(matchSchedule.date)
                             .font(.system(size: 12))
                             .foregroundStyle(Color.gray)
                         
-                        Text("Venue: \(venue)")
+                        Text("Venue: \(matchSchedule.venue)")
                             .font(.system(size: 12))
                             .foregroundStyle(Color.gray)
                             .multilineTextAlignment(.trailing)

@@ -19,6 +19,8 @@
 		929C86FB2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C86FA2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift */; };
 		929C870B2B87509D00402D21 /* LiveScoreCardShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870A2B87509D00402D21 /* LiveScoreCardShape.swift */; };
 		929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870C2B876BD900402D21 /* LiveScoreCardView.swift */; };
+		929FDB232B99811800DF28AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FDB222B99811800DF28AB /* Constants.swift */; };
+		929FDB292B99A72D00DF28AB /* UpcomingMatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FDB282B99A72D00DF28AB /* UpcomingMatchDetailView.swift */; };
 		92AE96AC2B90581300D4A799 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 92AE96AB2B90581300D4A799 /* Realm */; };
 		92AE96AE2B90581300D4A799 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92AE96AD2B90581300D4A799 /* RealmSwift */; };
 		92AE96B12B905BD100D4A799 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AE96B02B905BD100D4A799 /* RealmManager.swift */; };
@@ -82,6 +84,8 @@
 		929C86FA2B87462F00402D21 /* CricGeniusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricGeniusUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		929C870A2B87509D00402D21 /* LiveScoreCardShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScoreCardShape.swift; sourceTree = "<group>"; };
 		929C870C2B876BD900402D21 /* LiveScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScoreCardView.swift; sourceTree = "<group>"; };
+		929FDB222B99811800DF28AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		929FDB282B99A72D00DF28AB /* UpcomingMatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchDetailView.swift; sourceTree = "<group>"; };
 		92AE96B02B905BD100D4A799 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		92AE96D72B9063BF00D4A799 /* Innings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Innings.swift; sourceTree = "<group>"; };
 		92AE96D82B9063BF00D4A799 /* Deliveries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deliveries.swift; sourceTree = "<group>"; };
@@ -224,23 +228,14 @@
 				92CD0A212B887E52006E5B0B /* TopStoriesView.swift */,
 				92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */,
 				92BA8DF62B8DEE38008A0C23 /* WinnerPredictionView.swift */,
+				929FDB282B99A72D00DF28AB /* UpcomingMatchDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		92AE96AF2B905B9C00D4A799 /* Utils */ = {
+		929FDB212B9980D900DF28AB /* JsonImportModelsForMatch */ = {
 			isa = PBXGroup;
 			children = (
-				92AE96B02B905BD100D4A799 /* RealmManager.swift */,
-				92AE96F72B90689E00D4A799 /* RealmDataManager.swift */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		92AE96D62B9061DA00D4A799 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9291FC8C2B9887A700727257 /* IPLDataSet */,
 				92AE96E62B9063BF00D4A799 /* By.swift */,
 				92AE96D82B9063BF00D4A799 /* Deliveries.swift */,
 				92AE96E42B9063BF00D4A799 /* Event.swift */,
@@ -258,6 +253,25 @@
 				92AE96E02B9063BF00D4A799 /* Runs.swift */,
 				92AE96E12B9063BF00D4A799 /* Toss.swift */,
 				92AE96F92B90BA2C00D4A799 /* Target.swift */,
+			);
+			path = JsonImportModelsForMatch;
+			sourceTree = "<group>";
+		};
+		92AE96AF2B905B9C00D4A799 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				92AE96B02B905BD100D4A799 /* RealmManager.swift */,
+				92AE96F72B90689E00D4A799 /* RealmDataManager.swift */,
+				929FDB222B99811800DF28AB /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		92AE96D62B9061DA00D4A799 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				929FDB212B9980D900DF28AB /* JsonImportModelsForMatch */,
+				9291FC8C2B9887A700727257 /* IPLDataSet */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -450,6 +464,8 @@
 				92BA8DF72B8DEE38008A0C23 /* WinnerPredictionView.swift in Sources */,
 				92AE96F02B9063BF00D4A799 /* Runs.swift in Sources */,
 				92AE96EE2B9063BF00D4A799 /* Players.swift in Sources */,
+				929FDB292B99A72D00DF28AB /* UpcomingMatchDetailView.swift in Sources */,
+				929FDB232B99811800DF28AB /* Constants.swift in Sources */,
 				92AE96F12B9063BF00D4A799 /* Toss.swift in Sources */,
 				92AE96F22B9063BF00D4A799 /* Outcome.swift in Sources */,
 				9291FC8E2B9887C400727257 /* IPL2024Schedule.swift in Sources */,

@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Player {
+struct Player: Identifiable {
+    var id = UUID()
     var franchise: String
     var name: String
     var role: String

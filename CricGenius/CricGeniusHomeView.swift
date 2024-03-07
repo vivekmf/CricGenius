@@ -15,13 +15,6 @@ struct CricGeniusHomeView: View {
         Scorecard(matchDetail: "Final", seriesName: "World Cup 2024", teamAScore: 250, teamAWicket: 7, teamAOvers: "50.0", teamBScore: 180, teamBWicket: 5, teamBOvers: "30.0", needScore: "India Need 70 to win", teamAFlag: "england_flag", teamBFlag: "indian_flag")
     ]
     
-    let upcomingMatches: [UpcomingMatch] = [
-        UpcomingMatch(team1: "Chennai Super Kings", team2: "Gujarat Titans", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "08:00 PM", matchDate: "01-Feb-2024", venue: "Narendra Modi Stadium, Ahmedabad"),
-        UpcomingMatch(team1: "India", team2: "England", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "01:00 PM", matchDate: "01-Feb-2024", venue: "MCG, Australia"),
-        UpcomingMatch(team1: "India", team2: "England", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "03:30 PM", matchDate: "03-Feb-2024", venue: "Eden Gardens, India"),
-        UpcomingMatch(team1: "India", team2: "England", homeTeamImage: "indian_flag", awayTeamImage: "england_flag", matchTime: "06:00 PM", matchDate: "05-Feb-2024", venue: "Lords, England")
-    ]
-    
     let topStories: [TopStories] = [
         TopStories(storyImage: "kohli_dhoni", storyText: "Virat Kohli's 12k dream turns into nightmare"),
         TopStories(storyImage: "rohit_confrance", storyText: "'I don't sit in visa office ..' Rohit Sharma")
@@ -90,17 +83,10 @@ struct CricGeniusHomeView: View {
                         .foregroundColor(Color.white)
                 }
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        ForEach(upcomingMatches) { match in
-                            UpcomingMatchView(
-                                team1: match.team1, team2: match.team2,
-                                homeTeamImage: match.homeTeamImage,
-                                awayTeamImage: match.awayTeamImage,
-                                matchTime: match.matchTime,
-                                matchDate: match.matchDate,
-                                venue: match.venue
-                            )
-                            .padding(2)
+                      HStack(spacing: 20) {
+                          ForEach(ipl2024MatchSchedule) { matchSchedule in
+                              UpcomingMatchView(matchSchedule: matchSchedule)
+                                  .padding(2)
                         }
                     }
                 }
