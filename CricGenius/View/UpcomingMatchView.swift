@@ -32,7 +32,7 @@ struct UpcomingMatchView: View {
                             .resizable()
                             .frame(width: 32, height: 32)
                             .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.green))
+                            .overlay(Circle().stroke(Color(matchSchedule.awayTeam.teamColor)))
                             .padding(.bottom, 0)
                         
                         Text(matchSchedule.homeTeam.shortName)
@@ -42,14 +42,15 @@ struct UpcomingMatchView: View {
                         
                         Text("VS")
                             .font(.system(size: 12))
-                            .foregroundStyle(Color.gray)
+                            .foregroundStyle(Color.white)
+                            .bold()
                             .padding(.bottom, 2)
                         
                         Image(matchSchedule.awayTeam.flagImage)
                             .resizable()
                             .frame(width: 32, height: 32)
                             .clipShape(Circle())
-                            .overlay(Circle().stroke(Color.red))
+                            .overlay(Circle().stroke(Color(matchSchedule.homeTeam.teamColor)))
                             .padding(.bottom, 0)
                         
                         Text(matchSchedule.awayTeam.shortName)
@@ -68,13 +69,15 @@ struct UpcomingMatchView: View {
                             .foregroundStyle(Color.black)
                             .padding(.bottom, 15)
                         
-                        Text(matchSchedule.date)
+                        Text(CommonFunctions.formattedDate(dateString: matchSchedule.date))
                             .font(.system(size: 12))
-                            .foregroundStyle(Color.gray)
+                            .foregroundStyle(Color.white)
+                            .bold()
                         
                         Text("Venue: \(matchSchedule.venue)")
                             .font(.system(size: 12))
-                            .foregroundStyle(Color.gray)
+                            .foregroundStyle(Color.white)
+                            .bold()
                             .multilineTextAlignment(.trailing)
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: 150, maxHeight: .infinity, alignment: .trailing)
@@ -83,7 +86,9 @@ struct UpcomingMatchView: View {
                     .padding(20)
                     .padding(.leading, -30)
                 }
-                .background(Color.white)
+                .background(
+                    LinearGradient(gradient: Gradient(colors: [Color(matchSchedule.homeTeam.teamColor).opacity(1.0), Color(matchSchedule.awayTeam.teamColor).opacity(1.0)]), startPoint: .topLeading, endPoint: .bottomLeading)
+                )
                 .cornerRadius(16)
                 .presentationCornerRadius(28)
             }

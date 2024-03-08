@@ -61,3 +61,21 @@ let ipl2024Teams: [IPLTeam] = [
     IPLTeam(name: "Royal Challengers Bangalore", franchiseName: "Royal Challengers Bangalore", shortName: "RCB", flagImage: ImageConstants.rcbFlag, matchPlayed: 14, matchWon: 8, matchDraw: 1, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "United Spirits", coach: "Simon Katich", venue: "M. Chinnaswamy Stadium, Bangalore", captain: "Virat Kohli", players: royalChallengersBangalorePlayers, teamColor: ColorConstants.rcbRed),
     IPLTeam(name: "Sunrisers Hyderabad", franchiseName: "Sunrisers Hyderabad", shortName: "SRH", flagImage: ImageConstants.srhFlag, matchPlayed: 14, matchWon: 7, matchDraw: 2, iplFinalWon: 1, firstMatchYear: 2013, ownerId: "Sun TV Network", coach: "Trevor Bayliss", venue: "Rajiv Gandhi International Cricket Stadium, Hyderabad", captain: "Aiden Markram", players: sunrisersHyderabadPlayers, teamColor: ColorConstants.srhOrange)
 ]
+
+extension IPLTeam {
+    var wicketKeeperCount: Int {
+        players.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count
+    }
+    
+    var batsmanCount: Int {
+        players.filter { $0.role == "Batsman" }.count
+    }
+    
+    var allRounderCount: Int {
+        players.filter { $0.role == "All-rounder" }.count
+    }
+    
+    var bowlerCount: Int {
+        players.filter { $0.role == "Bowler" }.count
+    }
+}

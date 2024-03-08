@@ -22,9 +22,9 @@ struct CricGeniusHomeView: View {
     
     @State private var bottomMenuItems: [BottomNavigationMenuItem] = [
         BottomNavigationMenuItem(imageName: "house.fill", itemName: "Home", isSelected: true),
-//        BottomNavigationMenuItem(imageName: "figure.cricket", itemName: "Matches"),
-//        BottomNavigationMenuItem(imageName: "message.fill", itemName: "Messages"),
-//        BottomNavigationMenuItem(imageName: "person.fill", itemName: "Profile")
+        //        BottomNavigationMenuItem(imageName: "figure.cricket", itemName: "Matches"),
+        //        BottomNavigationMenuItem(imageName: "message.fill", itemName: "Messages"),
+        //        BottomNavigationMenuItem(imageName: "person.fill", itemName: "Profile")
     ]
     
     var body: some View {
@@ -83,10 +83,10 @@ struct CricGeniusHomeView: View {
                         .foregroundColor(Color.white)
                 }
                 ScrollView(.horizontal, showsIndicators: false) {
-                      HStack(spacing: 20) {
-                          ForEach(ipl2024MatchSchedule) { matchSchedule in
-                              UpcomingMatchView(matchSchedule: matchSchedule)
-                                  .padding(2)
+                    HStack(spacing: 20) {
+                        ForEach(ipl2024MatchSchedule) { matchSchedule in
+                            UpcomingMatchView(matchSchedule: matchSchedule)
+                                .padding(2)
                         }
                     }
                 }
@@ -119,6 +119,8 @@ struct CricGeniusHomeView: View {
             // Bottom Navigation Menu Section
             BottomNavigationView(bottomMenuItems: $bottomMenuItems)
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
         .padding()
         .background(Color(red: 0.13, green: 0.13, blue: 0.19))
     }
