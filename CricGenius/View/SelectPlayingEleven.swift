@@ -13,8 +13,10 @@ struct SelectPlayingEleven: View {
     @State private var selectedRole: String? = "WK"
     @State private var homeTeamPlayers: [Player] = []
     @State private var awayTeamPlayers: [Player] = []
-    
     let matchSchedule: UpcomingMatchSchedule
+    var teamData: IPLTeam {
+        selectedTeam == 0 ? matchSchedule.homeTeam : matchSchedule.awayTeam
+    }
     
     var body: some View {
         VStack(alignment: .center) {
@@ -37,127 +39,16 @@ struct SelectPlayingEleven: View {
             
             VStack {
                 TeamSelectionView(selectedTeam: $selectedTeam, matchSchedule: matchSchedule, teamData: teamData)
+                PlayerSelectionView(selectedRole: $selectedRole, teamData: teamData, homeTeamPlayers: $homeTeamPlayers, awayTeamPlayers: $awayTeamPlayers, selectedTeam: selectedTeam)
+                    .padding(.top, 50)
             }
-            
-            VStack {
-                HStack(spacing: 8) {
-                    Button(action: {
-                        self.selectedRole = "WK"
-                    }, label: {
-                        Text("WK(\(teamData.wicketKeeperCount))")
-                            .font(.system(size: 16))
-                            .bold()
-                            .foregroundColor(self.selectedRole == "WK" ?  Color(teamData.teamColor) : .white)
-                    })
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        self.selectedRole = "BAT"
-                    }, label: {
-                        Text("BAT(\(teamData.batsmanCount))")
-                            .font(.system(size: 16))
-                            .bold()
-                            .foregroundColor(self.selectedRole == "BAT" ?  Color(teamData.teamColor) : .white)
-                    })
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        self.selectedRole = "AR"
-                    }, label: {
-                        Text("AR(\(teamData.allRounderCount))")
-                            .font(.system(size: 16))
-                            .bold()
-                            .foregroundColor(self.selectedRole == "AR" ?  Color(teamData.teamColor) : .white)
-                    })
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        self.selectedRole = "BOWL"
-                    }, label: {
-                        Text("BOWL(\(teamData.bowlerCount))")
-                            .font(.system(size: 16))
-                            .bold()
-                            .foregroundColor(self.selectedRole == "BOWL" ?  Color(teamData.teamColor) : .white)
-                    })
-                }
-                .padding(.top, 10)
-                .padding(.leading, 40)
-                .padding(.trailing, 40)
-                
-                VStack {
-                    HStack {
-                        Text("Player")
-                            .font(.system(size: 18))
-                            .bold()
-                            .foregroundStyle(.white)
-                            .padding(.leading, 5)
-                        
-                        Spacer()
-                        
-                        Text("AVG")
-                            .font(.system(size: 18))
-                            .bold()
-                            .foregroundStyle(.white)
-                            .padding(.leading, 10)
-                        
-                        Text("+/-")
-                            .font(.system(size: 22))
-                            .bold()
-                            .foregroundStyle(.white)
-                            .padding(.leading, 40)
-                            .padding(.trailing, 25)
-                    }
-                    Rectangle()
-                        .fill(Color.white)
-                        .frame(height: 2)
-                        .padding(.top, -8)
-                    
-                    ScrollView {
-                        VStack {
-                            ForEach(teamData.players.filter { player in
-                                switch selectedRole {
-                                case "WK":
-                                    return player.role == "WK-Batsman"
-                                case "BOWL":
-                                    return player.role == "Bowler"
-                                case "BAT":
-                                    return player.role == "Batsman"
-                                case "AR":
-                                    return player.role == "All-rounder"
-                                default:
-                                    return false
-                                }
-                            }) { player in
-                                PlayerRow(player: player, team: teamData, addToTeam: {
-                                    if selectedTeam == 0 {
-                                        homeTeamPlayers.append(player)
-                                    } else {
-                                        awayTeamPlayers.append(player)
-                                    }
-                                })
-                            }
-                        }
-                    }
-                    .frame(height: 325)
-                }
-                .padding()
-            }
-            .padding(.top, 50)
-            
-            Spacer()
             
             Spacer()
             
             VStack {
                 GeometryReader { geometry in
                     HStack(spacing: 0) {
-                        Button(action: {
-                            print("Home Team Players: \(homeTeamPlayers)")
-                            print("Home Team Players: \(awayTeamPlayers)")
-                        }, label: {
+                        NavigationLink(destination: PlayingElevenView(matchSchedule: matchSchedule, homeTeamPlayers: homeTeamPlayers, awayTeamPlayers: awayTeamPlayers)) {
                             VStack {
                                 Text("REVIEW PLAYERS")
                                     .font(.system(size: 18))
@@ -173,9 +64,9 @@ struct SelectPlayingEleven: View {
                                         RoundedCorner(corner: .bottomLeft, radius: 25)
                                     )
                             )
-                        })
+                        }
                         
-                        Button(action: {}, label: {
+                        NavigationLink(destination: PredictionView()) {
                             VStack {
                                 Text("PREDICT WINNER")
                                     .font(.system(size: 18))
@@ -191,7 +82,7 @@ struct SelectPlayingEleven: View {
                                         RoundedCorner(corner: .bottomRight, radius: 25)
                                     )
                             )
-                        })
+                        }
                     }
                 }
             }
@@ -202,53 +93,31 @@ struct SelectPlayingEleven: View {
         .ignoresSafeArea()
     }
     
-    var teamData: IPLTeam {
-        selectedTeam == 0 ? matchSchedule.homeTeam : matchSchedule.awayTeam
+    func playerSelected(player: Player) -> Bool {
+        if selectedTeam == 0 {
+            return homeTeamPlayers.contains { $0.id == player.id }
+        } else {
+            return awayTeamPlayers.contains { $0.id == player.id }
+        }
     }
-}
-
-struct PlayerRow: View {
-    let player: Player
-    let team: IPLTeam
-    let addToTeam: () -> Void
     
-    var body: some View {
-        HStack {
-            Image("profile_img")
-                .resizable()
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())
-                .overlay(Circle().stroke(team.teamColor))
-                .padding(.leading, 5)
-            
-            Text(player.name)
-                .font(.title3)
-                .bold()
-                .foregroundColor(.white)
-                .padding(5)
-            
-            Spacer()
-            
-            Text("180.0")
-                .font(.system(size: 16))
-                .bold()
-                .foregroundColor(.white)
-                .padding(.trailing, 25)
-            
-            Button(action: {
-                addToTeam()
-            }) {
-                Image(systemName: "plus")
-                    .resizable()
-                    .frame(width: 30, height: 20)
-                    .padding(8)
-                    .padding(.leading, 5)
-                    .padding(.trailing, 5)
-                    .foregroundColor(.white)
-                    .background(Color.green)
-                    .cornerRadius(8)
+    func togglePlayerSelection(player: Player) {
+        if selectedTeam == 0 {
+            if let index = homeTeamPlayers.firstIndex(where: { $0.id == player.id }) {
+                homeTeamPlayers.remove(at: index)
+            } else {
+                guard homeTeamPlayers.count < 11 else { return }
+                homeTeamPlayers.append(player)
+                print("Home Team", homeTeamPlayers)
             }
-            .padding(.trailing, 10)
+        } else {
+            if let index = awayTeamPlayers.firstIndex(where: { $0.id == player.id }) {
+                awayTeamPlayers.remove(at: index)
+            } else {
+                guard awayTeamPlayers.count < 11 else { return }
+                awayTeamPlayers.append(player)
+                print("Away Team", awayTeamPlayers)
+            }
         }
     }
 }
