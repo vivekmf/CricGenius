@@ -7,8 +7,29 @@
 
 import Foundation
 import SwiftUI
+import RealmSwift
 
-struct IPLTeam: Identifiable {
+// Realm model for CricketTeam
+//class RealmCricketTeam: Object {
+//    @Persisted(primaryKey: true) var id = UUID().uuidString
+//    @Persisted var name: String = ""
+//    @Persisted var franchiseName: String = ""
+//    @Persisted var shortName: String = ""
+//    @Persisted var flagImage: String = ""
+//    @Persisted var matchPlayed: Int = 0
+//    @Persisted var matchWon: Int = 0
+//    @Persisted var matchDraw: Int = 0
+//    @Persisted var iplFinalWon: Int = 0
+//    @Persisted var firstMatchYear: Int = 0
+//    @Persisted var ownerId: String = ""
+//    @Persisted var coach: String = ""
+//    @Persisted var venue: String = ""
+//    @Persisted var captain: String = ""
+//    let players = LinkingObjects(fromType: RealmPlayer.self, property: "team")
+//    @Persisted var teamColor: String = ""
+//}
+
+struct CricketTeam: Identifiable {
     var id = UUID()
     var name: String
     var franchiseName: String
@@ -49,20 +70,20 @@ struct IPLTeam: Identifiable {
     }
 }
 
-let ipl2024Teams: [IPLTeam] = [
-    IPLTeam(name: "Chennai Super Kings", franchiseName: "Chennai Super Kings", shortName: "CSK", flagImage: ImageConstants.cskFlag, matchPlayed: 14, matchWon: 10, matchDraw: 1, iplFinalWon: 5, firstMatchYear: 2008, ownerId: "N. Srinivasan", coach: "Stephen Fleming", venue: "MA Chidambaram Stadium, Chepauk, Chennai", captain: "MS Dhoni", players: chennaiSuperKingsPlayers, teamColor: ColorConstants.cskYellow),
-    IPLTeam(name: "Delhi Capitals", franchiseName: "Delhi Capitals", shortName: "DC", flagImage: ImageConstants.dcFlag, matchPlayed: 14, matchWon: 9, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "JSW Group", coach: "Ricky Ponting", venue: "Arun Jaitley Stadium, Delhi", captain: "Rishabh Pant", players: delhiCapitalsPlayers, teamColor: ColorConstants.dcBlue),
-    IPLTeam(name: "Gujarat Titans", franchiseName: "Gujarat Titans", shortName: "GT", flagImage: ImageConstants.gtFlag, matchPlayed: 14, matchWon: 7, matchDraw: 3, iplFinalWon: 0, firstMatchYear: 2016, ownerId: "RPSG Group", coach: "Mohammad Kaif", venue: "Narendra Modi Stadium, Ahmedabad", captain: "Shubman Gill", players: gujaratTitansPlayers, teamColor: ColorConstants.gtRed),
-    IPLTeam(name: "Kolkata Knight Riders", franchiseName: "Kolkata Knight Riders", shortName: "KKR", flagImage: ImageConstants.kkrFlag, matchPlayed: 14, matchWon: 8, matchDraw: 1, iplFinalWon: 2, firstMatchYear: 2008, ownerId: "Knight Riders Group", coach: "Brendon McCullum", venue: "Eden Gardens, Kolkata", captain: "Shreyas Iyer", players: kolkataKnightRidersPlayers, teamColor: ColorConstants.kkrPurple),
-    IPLTeam(name: "Lucknow Super Giants", franchiseName: "Lucknow Super Giants", shortName: "LSG", flagImage: ImageConstants.lsgFlag, matchPlayed: 14, matchWon: 6, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2022, ownerId: "RPSG Group", coach: "Andy Flower", venue: "Ekana International Cricket Stadium, Lucknow", captain: "KL Rahul", players: lucknowSuperGiantsPlayers, teamColor: ColorConstants.lsgGreen),
-    IPLTeam(name: "Mumbai Indians", franchiseName: "Mumbai Indians", shortName: "MI", flagImage: ImageConstants.miFlag, matchPlayed: 14, matchWon: 11, matchDraw: 0, iplFinalWon: 5, firstMatchYear: 2008, ownerId: "Reliance Industries", coach: "Mahela Jayawardene", venue: "Wankhede Stadium, Mumbai", captain: "Rohit Sharma", players: mumbaiIndiansPlayers, teamColor: ColorConstants.miBlue),
-    IPLTeam(name: "Punjab Kings", franchiseName: "Punjab Kings", shortName: "PBKS", flagImage: ImageConstants.pbksFlag, matchPlayed: 14, matchWon: 5, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "Mohit Burman, Ness Wadia, Preity Zinta", coach: "Anil Kumble", venue: "Punjab Cricket Association Stadium, Mohali", captain: "Shikhar Dhawan", players: punjabKingsPlayers, teamColor: ColorConstants.pbksRed),
-    IPLTeam(name: "Rajasthan Royals", franchiseName: "Rajasthan Royals", shortName: "RR", flagImage: ImageConstants.rrFlag, matchPlayed: 14, matchWon: 6, matchDraw: 3, iplFinalWon: 1, firstMatchYear: 2008, ownerId: "Manoj Badale", coach: "Kumar Sangakkara", venue: "Sawai Mansingh Stadium, Jaipur", captain: "Sanju Samson", players: rajasthanRoyalsPlayers, teamColor: ColorConstants.rrPink),
-    IPLTeam(name: "Royal Challengers Bangalore", franchiseName: "Royal Challengers Bangalore", shortName: "RCB", flagImage: ImageConstants.rcbFlag, matchPlayed: 14, matchWon: 8, matchDraw: 1, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "United Spirits", coach: "Simon Katich", venue: "M. Chinnaswamy Stadium, Bangalore", captain: "Virat Kohli", players: royalChallengersBangalorePlayers, teamColor: ColorConstants.rcbRed),
-    IPLTeam(name: "Sunrisers Hyderabad", franchiseName: "Sunrisers Hyderabad", shortName: "SRH", flagImage: ImageConstants.srhFlag, matchPlayed: 14, matchWon: 7, matchDraw: 2, iplFinalWon: 1, firstMatchYear: 2013, ownerId: "Sun TV Network", coach: "Trevor Bayliss", venue: "Rajiv Gandhi International Cricket Stadium, Hyderabad", captain: "Aiden Markram", players: sunrisersHyderabadPlayers, teamColor: ColorConstants.srhOrange)
+let ipl2024Teams = [
+    CricketTeam(name: "Chennai Super Kings", franchiseName: "Chennai Super Kings", shortName: "CSK", flagImage: ImageConstants.cskFlag, matchPlayed: 14, matchWon: 10, matchDraw: 1, iplFinalWon: 5, firstMatchYear: 2008, ownerId: "N. Srinivasan", coach: "Stephen Fleming", venue: "MA Chidambaram Stadium, Chepauk, Chennai", captain: "MS Dhoni", players: chennaiSuperKingsPlayers, teamColor: ColorConstants.cskYellow),
+    CricketTeam(name: "Delhi Capitals", franchiseName: "Delhi Capitals", shortName: "DC", flagImage: ImageConstants.dcFlag, matchPlayed: 14, matchWon: 9, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "JSW Group", coach: "Ricky Ponting", venue: "Arun Jaitley Stadium, Delhi", captain: "Rishabh Pant", players: delhiCapitalsPlayers, teamColor: ColorConstants.dcBlue),
+    CricketTeam(name: "Gujarat Titans", franchiseName: "Gujarat Titans", shortName: "GT", flagImage: ImageConstants.gtFlag, matchPlayed: 14, matchWon: 7, matchDraw: 3, iplFinalWon: 0, firstMatchYear: 2016, ownerId: "RPSG Group", coach: "Mohammad Kaif", venue: "Narendra Modi Stadium, Ahmedabad", captain: "Shubman Gill", players: gujaratTitansPlayers, teamColor: ColorConstants.gtRed),
+    CricketTeam(name: "Kolkata Knight Riders", franchiseName: "Kolkata Knight Riders", shortName: "KKR", flagImage: ImageConstants.kkrFlag, matchPlayed: 14, matchWon: 8, matchDraw: 1, iplFinalWon: 2, firstMatchYear: 2008, ownerId: "Knight Riders Group", coach: "Brendon McCullum", venue: "Eden Gardens, Kolkata", captain: "Shreyas Iyer", players: kolkataKnightRidersPlayers, teamColor: ColorConstants.kkrPurple),
+    CricketTeam(name: "Lucknow Super Giants", franchiseName: "Lucknow Super Giants", shortName: "LSG", flagImage: ImageConstants.lsgFlag, matchPlayed: 14, matchWon: 6, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2022, ownerId: "RPSG Group", coach: "Andy Flower", venue: "Ekana International Cricket Stadium, Lucknow", captain: "KL Rahul", players: lucknowSuperGiantsPlayers, teamColor: ColorConstants.lsgGreen),
+    CricketTeam(name: "Mumbai Indians", franchiseName: "Mumbai Indians", shortName: "MI", flagImage: ImageConstants.miFlag, matchPlayed: 14, matchWon: 11, matchDraw: 0, iplFinalWon: 5, firstMatchYear: 2008, ownerId: "Reliance Industries", coach: "Mahela Jayawardene", venue: "Wankhede Stadium, Mumbai", captain: "Rohit Sharma", players: mumbaiIndiansPlayers, teamColor: ColorConstants.miBlue),
+    CricketTeam(name: "Punjab Kings", franchiseName: "Punjab Kings", shortName: "PBKS", flagImage: ImageConstants.pbksFlag, matchPlayed: 14, matchWon: 5, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "Mohit Burman, Ness Wadia, Preity Zinta", coach: "Anil Kumble", venue: "Punjab Cricket Association Stadium, Mohali", captain: "Shikhar Dhawan", players: punjabKingsPlayers, teamColor: ColorConstants.pbksRed),
+    CricketTeam(name: "Rajasthan Royals", franchiseName: "Rajasthan Royals", shortName: "RR", flagImage: ImageConstants.rrFlag, matchPlayed: 14, matchWon: 6, matchDraw: 3, iplFinalWon: 1, firstMatchYear: 2008, ownerId: "Manoj Badale", coach: "Kumar Sangakkara", venue: "Sawai Mansingh Stadium, Jaipur", captain: "Sanju Samson", players: rajasthanRoyalsPlayers, teamColor: ColorConstants.rrPink),
+    CricketTeam(name: "Royal Challengers Bangalore", franchiseName: "Royal Challengers Bangalore", shortName: "RCB", flagImage: ImageConstants.rcbFlag, matchPlayed: 14, matchWon: 8, matchDraw: 1, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "United Spirits", coach: "Simon Katich", venue: "M. Chinnaswamy Stadium, Bangalore", captain: "Virat Kohli", players: royalChallengersBangalorePlayers, teamColor: ColorConstants.rcbRed),
+    CricketTeam(name: "Sunrisers Hyderabad", franchiseName: "Sunrisers Hyderabad", shortName: "SRH", flagImage: ImageConstants.srhFlag, matchPlayed: 14, matchWon: 7, matchDraw: 2, iplFinalWon: 1, firstMatchYear: 2013, ownerId: "Sun TV Network", coach: "Trevor Bayliss", venue: "Rajiv Gandhi International Cricket Stadium, Hyderabad", captain: "Aiden Markram", players: sunrisersHyderabadPlayers, teamColor: ColorConstants.srhOrange)
 ]
 
-extension IPLTeam {
+extension CricketTeam {
     var wicketKeeperCount: Int {
         players.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count
     }

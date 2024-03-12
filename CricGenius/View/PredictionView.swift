@@ -22,11 +22,11 @@ struct PredictionView: View {
     }
 }
 
-func predictWinner() -> IPLAllMatchDetailsOutput?{
+func predictWinner() -> IPLTeamWinnerPredictOutput?{
     do{
         let predictionConfig = MLModelConfiguration()
-        let predictionModel = try IPLAllMatchDetails(configuration: predictionConfig)
-        let predictionData = try predictionModel.prediction(City: "Chennai", Date: "2024-03-22", Match_Type: "T20", Teams: "Chennai Super Kings", Toss_Decision: "field", Toss_Winner: "Chennai Super Kings", Venue: "MA Chidambaram Stadium", Overs: 20, Team: "Chennai Super Kings", Player: "MS Dhoni (c)")
+        let predictionModel = try IPLTeamWinnerPredict(configuration: predictionConfig)
+        let predictionData = try predictionModel.prediction(City: "Chennai", Date: "2024-03-22", Match_Type: "T20", Teams: "Chennai Super Kings, Royal Challengers Bangalore", Venue: "MA Chidambaram Stadium", Overs: 20)
         return predictionData
     }catch{
         return nil

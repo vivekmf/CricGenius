@@ -12,7 +12,7 @@ struct UpcomingMatchDetailView: View {
     @State private var selectedTeam: Int = 0
     @State private var selectedRole: String? = "WK"
     
-    var teamData: IPLTeam {
+    var teamData: CricketTeam {
         selectedTeam == 0 ? matchSchedule.homeTeam : matchSchedule.awayTeam
     }
     let matchSchedule: UpcomingMatchSchedule
@@ -254,7 +254,6 @@ struct RoundedCorner: Shape {
         return Path(path.cgPath)
     }
 }
-
 
 #Preview {
     CricGeniusHomeView()

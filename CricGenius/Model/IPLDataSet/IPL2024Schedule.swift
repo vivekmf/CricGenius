@@ -12,8 +12,8 @@ struct UpcomingMatchSchedule: Identifiable {
     var id = UUID()
     var date: String
     var time: String
-    var homeTeam: IPLTeam
-    var awayTeam: IPLTeam
+    var homeTeam: CricketTeam
+    var awayTeam: CricketTeam
     var venue: String
     var city: String
 }

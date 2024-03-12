@@ -10,12 +10,12 @@ import SwiftUI
 
 struct PlayerSelectionView: View {
     @Binding var selectedRole: String?
-    let teamData: IPLTeam
+    let teamData: CricketTeam
     @Binding var homeTeamPlayers: [Player]
     @Binding var awayTeamPlayers: [Player]
     let selectedTeam: Int
     
-    init(selectedRole: Binding<String?>, teamData: IPLTeam, homeTeamPlayers: Binding<[Player]>, awayTeamPlayers: Binding<[Player]>, selectedTeam: Int) {
+    init(selectedRole: Binding<String?>, teamData: CricketTeam, homeTeamPlayers: Binding<[Player]>, awayTeamPlayers: Binding<[Player]>, selectedTeam: Int) {
         self._selectedRole = selectedRole
         self.teamData = teamData
         self._homeTeamPlayers = homeTeamPlayers

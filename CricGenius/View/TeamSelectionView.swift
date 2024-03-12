@@ -11,7 +11,7 @@ import SwiftUI
 struct TeamSelectionView: View {
     @Binding var selectedTeam: Int
     var matchSchedule: UpcomingMatchSchedule
-    var teamData: IPLTeam
+    var teamData: CricketTeam
 
     var body: some View {
         GeometryReader { geometry in

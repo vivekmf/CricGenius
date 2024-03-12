@@ -14,7 +14,7 @@ struct SelectPlayingEleven: View {
     @State private var homeTeamPlayers: [Player] = []
     @State private var awayTeamPlayers: [Player] = []
     let matchSchedule: UpcomingMatchSchedule
-    var teamData: IPLTeam {
+    var teamData: CricketTeam {
         selectedTeam == 0 ? matchSchedule.homeTeam : matchSchedule.awayTeam
     }
     
@@ -48,9 +48,9 @@ struct SelectPlayingEleven: View {
             VStack {
                 GeometryReader { geometry in
                     HStack(spacing: 0) {
-                        NavigationLink(destination: PlayingElevenView(matchSchedule: matchSchedule, homeTeamPlayers: homeTeamPlayers, awayTeamPlayers: awayTeamPlayers)) {
+                        NavigationLink(destination: UpcomingMatchDetailView(matchSchedule: matchSchedule)) {
                             VStack {
-                                Text("REVIEW PLAYERS")
+                                Text("BACK")
                                     .font(.system(size: 18))
                                     .bold()
                                     .foregroundColor(.white)
@@ -66,9 +66,9 @@ struct SelectPlayingEleven: View {
                             )
                         }
                         
-                        NavigationLink(destination: PredictionView()) {
+                        NavigationLink(destination: PlayingElevenView(matchSchedule: matchSchedule, homeTeamPlayers: homeTeamPlayers, awayTeamPlayers: awayTeamPlayers)) {
                             VStack {
-                                Text("PREDICT WINNER")
+                                Text("REVIEW PLAYERS")
                                     .font(.system(size: 18))
                                     .bold()
                                     .foregroundColor(.white)

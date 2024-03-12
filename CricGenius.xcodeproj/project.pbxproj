@@ -55,6 +55,7 @@
 		92B85DC92B9F0A160065769D /* IPLAllMatchDetails.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92B85DC32B9F0A160065769D /* IPLAllMatchDetails.mlmodel */; };
 		92B85DCA2B9F0A160065769D /* ODIMensCricketMatch2002To2023.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92B85DC42B9F0A160065769D /* ODIMensCricketMatch2002To2023.mlmodel */; };
 		92BA8DF72B8DEE38008A0C23 /* WinnerPredictionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BA8DF62B8DEE38008A0C23 /* WinnerPredictionView.swift */; };
+		92BC6AA52BA021F300190E43 /* IPLTeamWinnerPredict.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92BC6AA42BA021F300190E43 /* IPLTeamWinnerPredict.mlmodel */; };
 		92CD0A202B886F23006E5B0B /* UpcomingMatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A1F2B886F23006E5B0B /* UpcomingMatchView.swift */; };
 		92CD0A222B887E52006E5B0B /* TopStoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A212B887E52006E5B0B /* TopStoriesView.swift */; };
 		92CD0A242B88B1B0006E5B0B /* BottomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CD0A232B88B1B0006E5B0B /* BottomNavigationView.swift */; };
@@ -126,6 +127,7 @@
 		92B85DC42B9F0A160065769D /* ODIMensCricketMatch2002To2023.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ODIMensCricketMatch2002To2023.mlmodel; sourceTree = "<group>"; };
 		92BA8DE02B8DAA3B008A0C23 /* CreateML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CreateML.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS17.2.sdk/System/Library/Frameworks/CreateML.framework; sourceTree = DEVELOPER_DIR; };
 		92BA8DF62B8DEE38008A0C23 /* WinnerPredictionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerPredictionView.swift; sourceTree = "<group>"; };
+		92BC6AA42BA021F300190E43 /* IPLTeamWinnerPredict.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IPLTeamWinnerPredict.mlmodel; sourceTree = "<group>"; };
 		92C0903F2B8EE67500920670 /* CricGenius.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CricGenius.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C090402B8EE67500920670 /* CricGeniusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C090412B8EE67500920670 /* CricGeniusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CricGeniusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -309,6 +311,7 @@
 			children = (
 				92B85DC02B9F0A160065769D /* Ipl2020FinalPredict.mlmodel */,
 				92B85DC22B9F0A160065769D /* Ipl2023MatchesModel.mlmodel */,
+				92BC6AA42BA021F300190E43 /* IPLTeamWinnerPredict.mlmodel */,
 				92B85DC12B9F0A160065769D /* Ipl2023MatchesTest.mlmodel */,
 				92B85DBF2B9F0A160065769D /* Ipl20082023MatchData.mlmodel */,
 				92B85DC32B9F0A160065769D /* IPLAllMatchDetails.mlmodel */,
@@ -498,6 +501,7 @@
 				92AE96F22B9063BF00D4A799 /* Outcome.swift in Sources */,
 				9291FC8E2B9887C400727257 /* IPL2024Schedule.swift in Sources */,
 				92AE96E72B9063BF00D4A799 /* Innings.swift in Sources */,
+				92BC6AA52BA021F300190E43 /* IPLTeamWinnerPredict.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

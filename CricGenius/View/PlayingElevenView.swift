@@ -21,7 +21,7 @@ struct PlayingElevenView: View {
         self._awayTeamPlayers = State(initialValue: awayTeamPlayers)
     }
     
-    var teamData: IPLTeam {
+    var teamData: CricketTeam {
         selectedTeam == 0 ? matchSchedule.homeTeam : matchSchedule.awayTeam
     }
     
