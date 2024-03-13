@@ -209,7 +209,7 @@ struct PlayingElevenView: View {
                             .frame(width: (geometry.size.width) / 2)
                             .background(
                                 RoundedRectangle(cornerRadius: 0, style: .continuous)
-                                    .foregroundColor(Color.blue)
+                                    .foregroundColor(matchSchedule.homeTeam.teamColor)
                                     .clipShape(
                                         RoundedCorner(corner: .bottomLeft, radius: 25)
                                     )
@@ -227,7 +227,7 @@ struct PlayingElevenView: View {
                             .frame(width: (geometry.size.width) / 2)
                             .background(
                                 RoundedRectangle(cornerRadius: 0, style: .continuous)
-                                    .foregroundColor(Color.yellow)
+                                    .foregroundColor(matchSchedule.awayTeam.teamColor)
                                     .clipShape(
                                         RoundedCorner(corner: .bottomRight, radius: 25)
                                     )

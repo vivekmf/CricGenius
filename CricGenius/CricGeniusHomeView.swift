@@ -31,10 +31,22 @@ struct CricGeniusHomeView: View {
         VStack {
             // Top Header of home page
             Button(action: {
-                //                RealmDataManager.readAndStoreJSONData()
+//                                RealmDataManager.readAndStoreJSONData()
                 let directoryURL = URL(fileURLWithPath: "/Users/nishantshah/Downloads/CricketData/ipl_json")
                 
                 do {
+                    
+//                    // Array of player arrays for each team
+                    let teamsPlayers = [chennaiSuperKingsPlayers, delhiCapitalsPlayers, gujaratTitansPlayers, kolkataKnightRidersPlayers, lucknowSuperGiantsPlayers, mumbaiIndiansPlayers, punjabKingsPlayers, rajasthanRoyalsPlayers, royalChallengersBangalorePlayers, sunrisersHyderabadPlayers]
+
+                    // Insert players of each team into Realm
+                    for players in teamsPlayers {
+                        insertPlayersIntoRealm(players: players)
+                    }
+
+                    insertCricketTeamsIntoRealm(teams: ipl2024Teams)
+                    insertScheduleIntoRealm(schedule: ipl2024MatchSchedule)
+                    
                     let fileURLs = try FileManager.default.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil)
                         .filter { $0.pathExtension == "json" }
                     for fileURL in fileURLs {

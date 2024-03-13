@@ -58,7 +58,7 @@ let chennaiSuperKingsPlayers: [Player] = [
     Player(team: "Chennai Super Kings", franchise: "Chennai Super Kings", name: "Avanish Rao Aravelly", role: "WK-Batsman", price: "INR 20 Lakhs", country: "India")
 ]
 
-let delhiCapitalsPlayers = [
+let delhiCapitalsPlayers: [Player] = [
     Player(team: "Delhi Capitals", franchise: "Delhi Capitals", name: "Rishabh Pant", role: "WT-Batsman", price: "TBA", country: "India"),
     Player(team: "Delhi Capitals", franchise: "Delhi Capitals", name: "Abhishek Porel", role: "WT-Batsman", price: "INR 20 Lakhs(R)", country: "India"),
     Player(team: "Delhi Capitals", franchise: "Delhi Capitals", name: "Prithvi Shaw", role: "Batsman", price: "INR 7.50Cr(R)", country: "India"),
@@ -86,7 +86,7 @@ let delhiCapitalsPlayers = [
     Player(team: "Delhi Capitals", franchise: "Delhi Capitals", name: "Swastik Chikara", role: "Batsman", price: "INR 20 Lakh", country: "India")
 ]
 
-let gujaratTitansPlayers = [
+let gujaratTitansPlayers: [Player] = [
     Player(team: "Gujarat Titans", franchise: "Gujarat Titans", name: "Shubman Gill", role: "Batsman", price: "INR 8 Crores(R)", country: "India"),
     Player(team: "Gujarat Titans", franchise: "Gujarat Titans", name: "Sai Sudarshan", role: "Batsman", price: "INR 20 Lakhs(R)", country: "India"),
     Player(team: "Gujarat Titans", franchise: "Gujarat Titans", name: "Abhinav Manohar", role: "Batsman", price: "INR 2.60 Crores(R)", country: "India"),
@@ -113,7 +113,7 @@ let gujaratTitansPlayers = [
     Player(team: "Gujarat Titans", franchise: "Gujarat Titans", name: "Robin Minz", role: "WK-Batsman", price: "INR 3.60 Crore", country: "India")
 ]
 
-let kolkataKnightRidersPlayers = [
+let kolkataKnightRidersPlayers: [Player] = [
     Player(team: "Kolkata Knight Riders", franchise: "Kolkata Knight Riders", name: "Shreyas Iyer", role: "Batsman", price: "INR 12.25 Crores(R)", country: "India"),
     Player(team: "Kolkata Knight Riders", franchise: "Kolkata Knight Riders", name: "Nitish Rana", role: "Batsman", price: "INR 8 crores(R)", country: "India"),
     Player(team: "Kolkata Knight Riders", franchise: "Kolkata Knight Riders", name: "Rinku Singh", role: "Batsman", price: "INR 55 Lakhs(R)", country: "India"),
@@ -139,7 +139,7 @@ let kolkataKnightRidersPlayers = [
     Player(team: "Kolkata Knight Riders", franchise: "Kolkata Knight Riders", name: "Dushmantha Chameera", role: "Bowler", price: "INR 50 Lakh", country: "Sri Lanka")
 ]
 
-let lucknowSuperGiantsPlayers = [
+let lucknowSuperGiantsPlayers: [Player] = [
     Player(team: "Lucknow Super Giants", franchise: "Lucknow Super Giants", name: "KL Rahul", role: "WK-Batsman", price: "INR 17 Crores(R)", country: "India"),
     Player(team: "Lucknow Super Giants", franchise: "Lucknow Super Giants", name: "Quinton de Kock (wk)", role: "WK-Batsman", price: "INR 6.75 Crores(R)", country: "South Africa"),
     Player(team: "Lucknow Super Giants", franchise: "Lucknow Super Giants", name: "Ravi Bishnoi", role: "Bowler", price: "INR 4 Crores(R)", country: "India"),
@@ -167,7 +167,7 @@ let lucknowSuperGiantsPlayers = [
     Player(team: "Lucknow Super Giants", franchise: "Lucknow Super Giants", name: "Shamar Joseph", role: "Bowler", price: "INR 3 Crore", country: "West Indies")
 ]
 
-let mumbaiIndiansPlayers = [
+let mumbaiIndiansPlayers: [Player] = [
     Player(team: "Mumbai Indians", franchise: "Mumbai Indians", name: "Rohit Sharma", role: "Batsman", price: "INR 16 Cr(R)", country: "India"),
     Player(team: "Mumbai Indians", franchise: "Mumbai Indians", name: "Suryakumar Yadav", role: "Batsman", price: "INR 8 Cr(R)", country: "India"),
     Player(team: "Mumbai Indians", franchise: "Mumbai Indians", name: "Tilak Varma", role: "Batsman", price: "INR 1.70 Cr(R)", country: "India"),
@@ -195,7 +195,7 @@ let mumbaiIndiansPlayers = [
     Player(team: "Mumbai Indians", franchise: "Mumbai Indians", name: "Shivalik Sharma", role: "All-rounder", price: "INR 20 Lakhs", country: "India")
 ]
 
-let punjabKingsPlayers = [
+let punjabKingsPlayers: [Player] = [
     Player(team: "Punjab Kings", franchise: "Punjab Kings", name: "Shikhar Dhawan(C)", role: "Batsman", price: "INR 8.25 Crores(R)", country: "India"),
     Player(team: "Punjab Kings", franchise: "Punjab Kings", name: "Prabhsimran Singh (wk)", role: "WK-Batsman", price: "INR 60 Lakhs(R)", country: "India"),
     Player(team: "Punjab Kings", franchise: "Punjab Kings", name: "Jitesh Sharma (wk)", role: "WK-Batsman", price: "INR 20 Lakhs(R)", country: "India"),
@@ -223,7 +223,7 @@ let punjabKingsPlayers = [
     Player(team: "Punjab Kings", franchise: "Punjab Kings", name: "Rilee Rossouw", role: "Batsman", price: "INR 8 Crore", country: "South Africa")
 ]
 
-let rajasthanRoyalsPlayers = [
+let rajasthanRoyalsPlayers: [Player] = [
     Player(team: "Rajasthan Royals", franchise: "Rajasthan Royals", name: "Yashasvi Jaiswal", role: "Batsman", price: "INR 4 Crores(R)", country: "India"),
     Player(team: "Rajasthan Royals", franchise: "Rajasthan Royals", name: "Shimron Hetmyer", role: "Batsman", price: "INR 8.50 Crores(R)", country: "West Indies"),
     Player(team: "Rajasthan Royals", franchise: "Rajasthan Royals", name: "Sanju Samson (c&wk)", role: "WK-Batsman", price: "INR 14 Cr(R)", country: "India"),
@@ -248,7 +248,7 @@ let rajasthanRoyalsPlayers = [
     Player(team: "Rajasthan Royals", franchise: "Rajasthan Royals", name: "Nandre Burger", role: "Bowler", price: "INR 50 Lakh", country: "South Africa")
 ]
 
-let royalChallengersBangalorePlayers = [
+let royalChallengersBangalorePlayers: [Player] = [
     Player(team: "Royal Challengers Bangalore", franchise: "Royal Challengers Bangalore", name: "Virat Kohli", role: "Batsman", price: "INR 15 CR(R)", country: "India"),
     Player(team: "Royal Challengers Bangalore", franchise: "Royal Challengers Bangalore", name: "Suyash Prabhudessai", role: "Batsman", price: "INR 30 Lakhs(R)", country: "India"),
     Player(team: "Royal Challengers Bangalore", franchise: "Royal Challengers Bangalore", name: "Faf du Plessis(C)", role: "Batsman", price: "INR 7 crores(R)", country: "South Africa"),
@@ -276,7 +276,7 @@ let royalChallengersBangalorePlayers = [
     Player(team: "Royal Challengers Bangalore", franchise: "Royal Challengers Bangalore", name: "Swapnil Singh", role: "Allrounder", price: "INR 20 Lakh", country: "India")
 ]
 
-let sunrisersHyderabadPlayers = [
+let sunrisersHyderabadPlayers: [Player] = [
     Player(team: "Sunrisers Hyderabad", franchise: "Sunrisers Hyderabad", name: "Aiden Markram", role: "Batsman", price: "INR 2.60 Crores(R)", country: "South Africa"),
     Player(team: "Sunrisers Hyderabad", franchise: "Sunrisers Hyderabad", name: "Rahul Tripathi", role: "Batsman", price: "INR 8.50 Crores(R)", country: "India"),
     Player(team: "Sunrisers Hyderabad", franchise: "Sunrisers Hyderabad", name: "Glenn Phillips (wk)", role: "WK-Batsman", price: "INR 1.50 Crores(R)", country: "New Zealand"),
@@ -303,3 +303,51 @@ let sunrisersHyderabadPlayers = [
     Player(team: "Sunrisers Hyderabad", franchise: "Sunrisers Hyderabad", name: "Akash Singh", role: "Bowler", price: "INR 20 Lakh", country: "India"),
     Player(team: "Sunrisers Hyderabad", franchise: "Sunrisers Hyderabad", name: "Jhathavedh Subramanyan", role: "Bowler", price: "INR 20 Lakh", country: "India")
 ]
+
+// Function to insert Players into Realm
+func insertPlayersIntoRealm(players: [Player]) {
+    // Get the default Realm
+    guard let realm = try? Realm() else {
+        fatalError("Failed to access Realm database")
+    }
+    
+    // Write Player data into Realm
+    try? realm.write {
+        for player in players {
+            let realmPlayer = RealmPlayer()
+            realmPlayer.id = UUID().uuidString
+            realmPlayer.team = player.team
+            realmPlayer.franchise = player.franchise
+            realmPlayer.name = player.name
+            realmPlayer.role = player.role
+            realmPlayer.price = player.price
+            realmPlayer.country = player.country
+            
+            // Add the player to Realm
+            realm.add(realmPlayer)
+        }
+    }
+}
+
+func fetchPlayersForTeamFromRealm(teamName: String) -> [Player] {
+    // Get the default Realm
+    guard let realm = try? Realm() else {
+        fatalError("Failed to access Realm database")
+    }
+    
+    // Fetch Player objects for the given team from Realm
+    let realmPlayers = realm.objects(RealmPlayer.self).filter("team == %@", teamName)
+    
+    // Map Realm objects to Player objects
+    let players = realmPlayers.map { realmPlayer -> Player in
+        // Create Player objects using data from Realm
+        return Player(team: realmPlayer.team,
+                      franchise: realmPlayer.franchise,
+                      name: realmPlayer.name,
+                      role: realmPlayer.role,
+                      price: realmPlayer.price,
+                      country: realmPlayer.country)
+    }
+    
+    return Array(players)
+}
