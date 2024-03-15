@@ -21,8 +21,6 @@
 		929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929C870C2B876BD900402D21 /* LiveScoreCardView.swift */; };
 		929FDB232B99811800DF28AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FDB222B99811800DF28AB /* Constants.swift */; };
 		929FDB292B99A72D00DF28AB /* UpcomingMatchDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929FDB282B99A72D00DF28AB /* UpcomingMatchDetailView.swift */; };
-		92A60DE12BA2DA1200275BF9 /* IPLDataTraning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92A60DE02BA2DA1200275BF9 /* IPLDataTraning.mlmodel */; };
-		92A60DE32BA2FD9C00275BF9 /* IPLDataWinnerPredict.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92A60DE22BA2FD9C00275BF9 /* IPLDataWinnerPredict.mlmodel */; };
 		92AE96AC2B90581300D4A799 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 92AE96AB2B90581300D4A799 /* Realm */; };
 		92AE96AE2B90581300D4A799 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92AE96AD2B90581300D4A799 /* RealmSwift */; };
 		92AE96B12B905BD100D4A799 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AE96B02B905BD100D4A799 /* RealmManager.swift */; };
@@ -44,8 +42,7 @@
 		92AE96F62B9063BF00D4A799 /* By.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AE96E62B9063BF00D4A799 /* By.swift */; };
 		92AE96F82B90689E00D4A799 /* RealmDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AE96F72B90689E00D4A799 /* RealmDataManager.swift */; };
 		92AE96FA2B90BA2C00D4A799 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AE96F92B90BA2C00D4A799 /* Target.swift */; };
-		92B1028D2BA456450098CA0A /* IPLTeamVenueTraining.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92B1028C2BA456440098CA0A /* IPLTeamVenueTraining.mlmodel */; };
-		92B1028F2BA473110098CA0A /* IPLTeamVenueTraning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92B1028E2BA473110098CA0A /* IPLTeamVenueTraning.mlmodel */; };
+		92B102912BA481EF0098CA0A /* IPLTeamVenueTraning.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 92B102902BA481EF0098CA0A /* IPLTeamVenueTraning.mlmodel */; };
 		92B73E902B9ADA0000E31677 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73E8F2B9ADA0000E31677 /* CommonFunctions.swift */; };
 		92B73E922B9AF4FD00E31677 /* SelectPlayingEleven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73E912B9AF4FD00E31677 /* SelectPlayingEleven.swift */; };
 		92B73E942B9B004100E31677 /* TeamSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B73E932B9B004100E31677 /* TeamSelectionView.swift */; };
@@ -90,8 +87,6 @@
 		929C870C2B876BD900402D21 /* LiveScoreCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScoreCardView.swift; sourceTree = "<group>"; };
 		929FDB222B99811800DF28AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		929FDB282B99A72D00DF28AB /* UpcomingMatchDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMatchDetailView.swift; sourceTree = "<group>"; };
-		92A60DE02BA2DA1200275BF9 /* IPLDataTraning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IPLDataTraning.mlmodel; sourceTree = "<group>"; };
-		92A60DE22BA2FD9C00275BF9 /* IPLDataWinnerPredict.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IPLDataWinnerPredict.mlmodel; sourceTree = "<group>"; };
 		92AE96B02B905BD100D4A799 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		92AE96D72B9063BF00D4A799 /* Innings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Innings.swift; sourceTree = "<group>"; };
 		92AE96D82B9063BF00D4A799 /* Deliveries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deliveries.swift; sourceTree = "<group>"; };
@@ -111,8 +106,7 @@
 		92AE96E62B9063BF00D4A799 /* By.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = By.swift; sourceTree = "<group>"; };
 		92AE96F72B90689E00D4A799 /* RealmDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataManager.swift; sourceTree = "<group>"; };
 		92AE96F92B90BA2C00D4A799 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
-		92B1028C2BA456440098CA0A /* IPLTeamVenueTraining.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IPLTeamVenueTraining.mlmodel; sourceTree = "<group>"; };
-		92B1028E2BA473110098CA0A /* IPLTeamVenueTraning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IPLTeamVenueTraning.mlmodel; sourceTree = "<group>"; };
+		92B102902BA481EF0098CA0A /* IPLTeamVenueTraning.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = IPLTeamVenueTraning.mlmodel; sourceTree = "<group>"; };
 		92B73E8F2B9ADA0000E31677 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
 		92B73E912B9AF4FD00E31677 /* SelectPlayingEleven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlayingEleven.swift; sourceTree = "<group>"; };
 		92B73E932B9B004100E31677 /* TeamSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamSelectionView.swift; sourceTree = "<group>"; };
@@ -300,10 +294,7 @@
 		92BA8DE22B8DC60C008A0C23 /* MLModels */ = {
 			isa = PBXGroup;
 			children = (
-				92A60DE02BA2DA1200275BF9 /* IPLDataTraning.mlmodel */,
-				92B1028E2BA473110098CA0A /* IPLTeamVenueTraning.mlmodel */,
-				92B1028C2BA456440098CA0A /* IPLTeamVenueTraining.mlmodel */,
-				92A60DE22BA2FD9C00275BF9 /* IPLDataWinnerPredict.mlmodel */,
+				92B102902BA481EF0098CA0A /* IPLTeamVenueTraning.mlmodel */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -376,7 +367,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					929C86D82B87462E00402D21 = {
 						CreatedOnToolsVersion = 15.2;
@@ -463,19 +454,16 @@
 				929C86DD2B87462E00402D21 /* CricGeniusApp.swift in Sources */,
 				92AE96EB2B9063BF00D4A799 /* Overs.swift in Sources */,
 				92B73E922B9AF4FD00E31677 /* SelectPlayingEleven.swift in Sources */,
-				92A60DE32BA2FD9C00275BF9 /* IPLDataWinnerPredict.mlmodel in Sources */,
 				92AE96ED2B9063BF00D4A799 /* People.swift in Sources */,
 				92AE96B12B905BD100D4A799 /* RealmManager.swift in Sources */,
 				92B85DB82B9EC7DC0065769D /* PredictionView.swift in Sources */,
 				92B85DBE2B9EE8DD0065769D /* PlayerSelectionView.swift in Sources */,
-				92B1028D2BA456450098CA0A /* IPLTeamVenueTraining.mlmodel in Sources */,
-				92A60DE12BA2DA1200275BF9 /* IPLDataTraning.mlmodel in Sources */,
 				929C870B2B87509D00402D21 /* LiveScoreCardShape.swift in Sources */,
 				92B85DBC2B9EDA4A0065769D /* PlayingElevenView.swift in Sources */,
 				929C870D2B876BD900402D21 /* LiveScoreCardView.swift in Sources */,
 				9291FC902B9897DE00727257 /* TeamPlayers.swift in Sources */,
 				92AE96F52B9063BF00D4A799 /* MatchDetail.swift in Sources */,
-				92B1028F2BA473110098CA0A /* IPLTeamVenueTraning.mlmodel in Sources */,
+				92B102912BA481EF0098CA0A /* IPLTeamVenueTraning.mlmodel in Sources */,
 				92AE96F02B9063BF00D4A799 /* Runs.swift in Sources */,
 				92AE96EE2B9063BF00D4A799 /* Players.swift in Sources */,
 				929FDB292B99A72D00DF28AB /* UpcomingMatchDetailView.swift in Sources */,
@@ -556,6 +544,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -574,7 +563,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -617,6 +608,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -629,7 +621,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -644,6 +638,7 @@
 				CODE_SIGN_ENTITLEMENTS = CricGenius/CricGenius.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CricGenius/Preview Content\"";
 				DEVELOPMENT_TEAM = H8WK39232A;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -682,6 +677,7 @@
 				CODE_SIGN_ENTITLEMENTS = CricGenius/CricGenius.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"CricGenius/Preview Content\"";
 				DEVELOPMENT_TEAM = H8WK39232A;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -719,6 +715,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = H8WK39232A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -742,6 +739,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = H8WK39232A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -764,6 +762,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = H8WK39232A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
@@ -786,6 +785,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = H8WK39232A;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
