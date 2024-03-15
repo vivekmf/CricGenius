@@ -11,14 +11,12 @@ import SwiftUI
 struct PlayingElevenView: View {
     @State private var selectedTeam: Int = 0
     @State private var selectedRole: String? = "WK"
-    @State private var homeTeamPlayers: [Player]
-    @State private var awayTeamPlayers: [Player]
+    @ObservedObject var selectedPlayersViewModel: SelectedPlayersViewModel
     let matchSchedule: UpcomingMatchSchedule
     
-    init(matchSchedule: UpcomingMatchSchedule, homeTeamPlayers: [Player], awayTeamPlayers: [Player]) {
+    init(matchSchedule: UpcomingMatchSchedule, selectedPlayersViewModel: SelectedPlayersViewModel) {
         self.matchSchedule = matchSchedule
-        self._homeTeamPlayers = State(initialValue: homeTeamPlayers)
-        self._awayTeamPlayers = State(initialValue: awayTeamPlayers)
+        self.selectedPlayersViewModel = selectedPlayersViewModel
     }
     
     var teamData: CricketTeam {
@@ -27,7 +25,6 @@ struct PlayingElevenView: View {
     
     var body: some View {
         VStack {
-            // Existing TeamSelectionView
             VStack {
                 TeamSelectionView(selectedTeam: $selectedTeam, matchSchedule: matchSchedule, teamData: teamData)
             }
@@ -39,7 +36,7 @@ struct PlayingElevenView: View {
                     Button(action: {
                         self.selectedRole = "WK"
                     }) {
-                        Text("WK(\(selectedTeam == 0 ? homeTeamPlayers.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count : awayTeamPlayers.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count))")
+                        Text("WK(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count))")
                             .font(.system(size: 16))
                             .bold()
                             .foregroundColor(self.selectedRole == "WK" ?  Color(teamData.teamColor) : .white)
@@ -50,7 +47,7 @@ struct PlayingElevenView: View {
                     Button(action: {
                         self.selectedRole = "BAT"
                     }) {
-                        Text("BAT(\(selectedTeam == 0 ? homeTeamPlayers.filter { $0.role == "Batsman" }.count : awayTeamPlayers.filter { $0.role == "Batsman" }.count))")
+                        Text("BAT(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "Batsman" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "Batsman" }.count))")
                             .font(.system(size: 16))
                             .bold()
                             .foregroundColor(self.selectedRole == "BAT" ?  Color(teamData.teamColor) : .white)
@@ -61,7 +58,7 @@ struct PlayingElevenView: View {
                     Button(action: {
                         self.selectedRole = "AR"
                     }) {
-                        Text("AR(\(selectedTeam == 0 ? homeTeamPlayers.filter { $0.role == "All-rounder" }.count : awayTeamPlayers.filter { $0.role == "All-rounder" }.count))")
+                        Text("AR(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "All-rounder" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "All-rounder" }.count))")
                             .font(.system(size: 16))
                             .bold()
                             .foregroundColor(self.selectedRole == "AR" ?  Color(teamData.teamColor) : .white)
@@ -72,7 +69,7 @@ struct PlayingElevenView: View {
                     Button(action: {
                         self.selectedRole = "BOWL"
                     }) {
-                        Text("BOWL(\(selectedTeam == 0 ? homeTeamPlayers.filter { $0.role == "Bowler" }.count : awayTeamPlayers.filter { $0.role == "Bowler" }.count))")
+                        Text("BOWL(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "Bowler" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "Bowler" }.count))")
                             .font(.system(size: 16))
                             .bold()
                             .foregroundColor(self.selectedRole == "BOWL" ?  Color(teamData.teamColor) : .white)
@@ -111,7 +108,7 @@ struct PlayingElevenView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(selectedTeam == 0 ? homeTeamPlayers.filter { player in
+                        ForEach(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { player in
                             switch selectedRole {
                             case "WK":
                                 return player.role == "WK-Batsman"
@@ -124,7 +121,7 @@ struct PlayingElevenView: View {
                             default:
                                 return false
                             }
-                        } : awayTeamPlayers.filter { player in
+                        } : selectedPlayersViewModel.awayTeamPlayers.filter { player in
                             switch selectedRole {
                             case "WK":
                                 return player.role == "WK-Batsman"
@@ -198,7 +195,7 @@ struct PlayingElevenView: View {
             VStack {
                 GeometryReader { geometry in
                     HStack(spacing: 0) {
-                        NavigationLink(destination: SelectPlayingEleven(matchSchedule: matchSchedule)) {
+                        NavigationLink(destination: SelectPlayingEleven(selectedPlayersViewModel: selectedPlayersViewModel, matchSchedule: matchSchedule)) {
                             VStack {
                                 Text("BACK")
                                     .font(.system(size: 18))
@@ -216,7 +213,7 @@ struct PlayingElevenView: View {
                             )
                         }
                         
-                        NavigationLink(destination: PredictionView()) {
+                        NavigationLink(destination: PredictionView(selectedPlayersViewModel: selectedPlayersViewModel, matchSchedule: matchSchedule)) {
                             VStack {
                                 Text("PREDICT WINNER")
                                     .font(.system(size: 18))
@@ -247,28 +244,29 @@ struct PlayingElevenView: View {
     
     func playerSelected(player: Player) -> Bool {
         if selectedTeam == 0 {
-            return homeTeamPlayers.contains { $0.id == player.id }
+            return selectedPlayersViewModel.homeTeamPlayers.contains { $0.id == player.id }
         } else {
-            return awayTeamPlayers.contains { $0.id == player.id }
+            return selectedPlayersViewModel.awayTeamPlayers.contains { $0.id == player.id }
         }
     }
     
     func togglePlayerSelection(player: Player) {
+        // Modify the selected players in the shared view model
         if selectedTeam == 0 {
-            if let index = homeTeamPlayers.firstIndex(where: { $0.id == player.id }) {
-                homeTeamPlayers.remove(at: index)
+            if let index = selectedPlayersViewModel.homeTeamPlayers.firstIndex(where: { $0.id == player.id }) {
+                selectedPlayersViewModel.homeTeamPlayers.remove(at: index)
             } else {
-                guard homeTeamPlayers.count < 11 else { return }
-                homeTeamPlayers.append(player)
-                print("Home Team", homeTeamPlayers)
+                guard selectedPlayersViewModel.homeTeamPlayers.count < 11 else { return }
+                selectedPlayersViewModel.homeTeamPlayers.append(player)
+                print("Home Team", selectedPlayersViewModel.homeTeamPlayers)
             }
         } else {
-            if let index = awayTeamPlayers.firstIndex(where: { $0.id == player.id }) {
-                awayTeamPlayers.remove(at: index)
+            if let index = selectedPlayersViewModel.awayTeamPlayers.firstIndex(where: { $0.id == player.id }) {
+                selectedPlayersViewModel.awayTeamPlayers.remove(at: index)
             } else {
-                guard awayTeamPlayers.count < 11 else { return }
-                awayTeamPlayers.append(player)
-                print("Away Team", awayTeamPlayers)
+                guard selectedPlayersViewModel.awayTeamPlayers.count < 11 else { return }
+                selectedPlayersViewModel.awayTeamPlayers.append(player)
+                print("Away Team", selectedPlayersViewModel.awayTeamPlayers)
             }
         }
     }

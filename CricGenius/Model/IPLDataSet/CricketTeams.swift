@@ -26,7 +26,7 @@ class RealmCricketTeam: Object {
     @Persisted var venue: String = ""
     @Persisted var captain: String = ""
     let players = LinkingObjects(fromType: RealmPlayer.self, property: "team")
-    @Persisted var teamColor: String = ""
+    @Persisted var teamColor: String
 }
 
 struct CricketTeam: Identifiable {
@@ -45,9 +45,6 @@ struct CricketTeam: Identifiable {
     var venue: String
     var captain: String
     var players: [Player]
-    var teamPlayers: [Player] {
-        return players.filter { $0.franchise == franchiseName }
-    }
     var teamColor: Color
     
     // Initialize IPLTeam with team color
@@ -66,7 +63,11 @@ struct CricketTeam: Identifiable {
         self.coach = coach
         self.venue = venue
         self.captain = captain
-        self.players = players
+        self.players = players.map { player in
+            var playerWithTeam = player
+            playerWithTeam.team = shortName
+            return playerWithTeam
+        }
         self.teamColor = teamColor
     }
 }
@@ -74,7 +75,7 @@ struct CricketTeam: Identifiable {
 let ipl2024Teams = [
     CricketTeam(name: "Chennai Super Kings", franchiseName: "Chennai Super Kings", shortName: "CSK", flagImage: ImageConstants.cskFlag, matchPlayed: 14, matchWon: 10, matchDraw: 1, iplFinalWon: 5, firstMatchYear: 2008, ownerId: "N. Srinivasan", coach: "Stephen Fleming", venue: "MA Chidambaram Stadium, Chepauk, Chennai", captain: "MS Dhoni", players: chennaiSuperKingsPlayers, teamColor: ColorConstants.cskYellow),
     CricketTeam(name: "Delhi Capitals", franchiseName: "Delhi Capitals", shortName: "DC", flagImage: ImageConstants.dcFlag, matchPlayed: 14, matchWon: 9, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2008, ownerId: "JSW Group", coach: "Ricky Ponting", venue: "Arun Jaitley Stadium, Delhi", captain: "Rishabh Pant", players: delhiCapitalsPlayers, teamColor: ColorConstants.dcBlue),
-    CricketTeam(name: "Gujarat Titans", franchiseName: "Gujarat Titans", shortName: "GT", flagImage: ImageConstants.gtFlag, matchPlayed: 14, matchWon: 7, matchDraw: 3, iplFinalWon: 0, firstMatchYear: 2016, ownerId: "RPSG Group", coach: "Mohammad Kaif", venue: "Narendra Modi Stadium, Ahmedabad", captain: "Shubman Gill", players: gujaratTitansPlayers, teamColor: ColorConstants.gtRed),
+    CricketTeam(name: "Gujarat Titans", franchiseName: "Gujarat Titans", shortName: "GT", flagImage: ImageConstants.gtFlag, matchPlayed: 14, matchWon: 7, matchDraw: 3, iplFinalWon: 0, firstMatchYear: 2016, ownerId: "RPSG Group", coach: "Mohammad Kaif", venue: "Narendra Modi Stadium, Ahmedabad", captain: "Shubman Gill", players: gujaratTitansPlayers, teamColor: ColorConstants.gtGray),
     CricketTeam(name: "Kolkata Knight Riders", franchiseName: "Kolkata Knight Riders", shortName: "KKR", flagImage: ImageConstants.kkrFlag, matchPlayed: 14, matchWon: 8, matchDraw: 1, iplFinalWon: 2, firstMatchYear: 2008, ownerId: "Knight Riders Group", coach: "Brendon McCullum", venue: "Eden Gardens, Kolkata", captain: "Shreyas Iyer", players: kolkataKnightRidersPlayers, teamColor: ColorConstants.kkrPurple),
     CricketTeam(name: "Lucknow Super Giants", franchiseName: "Lucknow Super Giants", shortName: "LSG", flagImage: ImageConstants.lsgFlag, matchPlayed: 14, matchWon: 6, matchDraw: 2, iplFinalWon: 0, firstMatchYear: 2022, ownerId: "RPSG Group", coach: "Andy Flower", venue: "Ekana International Cricket Stadium, Lucknow", captain: "KL Rahul", players: lucknowSuperGiantsPlayers, teamColor: ColorConstants.lsgGreen),
     CricketTeam(name: "Mumbai Indians", franchiseName: "Mumbai Indians", shortName: "MI", flagImage: ImageConstants.miFlag, matchPlayed: 14, matchWon: 11, matchDraw: 0, iplFinalWon: 5, firstMatchYear: 2008, ownerId: "Reliance Industries", coach: "Mahela Jayawardene", venue: "Wankhede Stadium, Mumbai", captain: "Rohit Sharma", players: mumbaiIndiansPlayers, teamColor: ColorConstants.miBlue),
@@ -129,7 +130,7 @@ func insertCricketTeamsIntoRealm(teams: [CricketTeam]) {
             realmTeam.coach = team.coach
             realmTeam.venue = team.venue
             realmTeam.captain = team.captain
-            realmTeam.teamColor = team.teamColor.description
+            realmTeam.teamColor = team.teamColor.hexString()
             
             // Add the team to Realm
             realm.add(realmTeam)
@@ -174,7 +175,7 @@ func fetchTeamsFromRealm() -> [CricketTeam] {
                            venue: realmTeam.venue,
                            captain: realmTeam.captain,
                            players: Array(players),
-                           teamColor: Color(.sRGB, red: 1.0, green: 0.8, blue: 0.0, opacity: 1.0))
+                           teamColor: Color(hex: realmTeam.teamColor))
     }
     
     return Array(teams)

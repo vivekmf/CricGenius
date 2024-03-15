@@ -11,6 +11,7 @@ import SwiftUI
 struct UpcomingMatchDetailView: View {
     @State private var selectedTeam: Int = 0
     @State private var selectedRole: String? = "WK"
+    @ObservedObject var selectedPlayersViewModel = SelectedPlayersViewModel()
     
     var teamData: CricketTeam {
         selectedTeam == 0 ? matchSchedule.homeTeam : matchSchedule.awayTeam
@@ -211,7 +212,7 @@ struct UpcomingMatchDetailView: View {
                             )
                         }
                         
-                        NavigationLink(destination: SelectPlayingEleven(matchSchedule: matchSchedule)) {
+                        NavigationLink(destination: SelectPlayingEleven(selectedPlayersViewModel: selectedPlayersViewModel, matchSchedule: matchSchedule)) {
                             VStack {
                                 Text("PLAYING 11")
                                     .font(.system(size: 18))

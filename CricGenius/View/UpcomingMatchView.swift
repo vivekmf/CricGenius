@@ -66,7 +66,7 @@ struct UpcomingMatchView: View {
                         Text(matchSchedule.time)
                             .font(.system(size: 18))
                             .bold()
-                            .foregroundStyle(Color.black)
+                            .foregroundStyle(.white)
                             .padding(.bottom, 15)
                         
                         Text(CommonFunctions.formattedDate(dateString: matchSchedule.date))

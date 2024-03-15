@@ -96,7 +96,7 @@ struct CricGeniusHomeView: View {
                 }
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
-                        ForEach(ipl2024MatchSchedule) { matchSchedule in
+                        ForEach(upcomingMatchSchedule) { matchSchedule in
                             UpcomingMatchView(matchSchedule: matchSchedule)
                                 .padding(2)
                         }

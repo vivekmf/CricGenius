@@ -19,6 +19,7 @@ struct ImageConstants {
     static let rrFlag = String("rr_flag")
     static let rcbFlag = String("rcb_flag")
     static let srhFlag = String("srh_flag")
+    static let winnerBanner = String("winner_banner")
 }
 
 struct ColorConstants {
@@ -28,8 +29,8 @@ struct ColorConstants {
     static let rcbRed = Color(red: 216/255, green: 28/255, blue: 37/255)
     static let srhOrange = Color(red: 255/255, green: 130/255, blue: 0)
     static let dcBlue = Color(red: 0, green: 48/255, blue: 135/255)
-    static let rrPink = Color(red: 255/255, green: 68/255, blue: 62/255)
+    static let rrPink = Color(red: 0.77, green: 0.04, blue: 0.56)
     static let pbksRed = Color(red: 193/255, green: 0, blue: 37/255)
     static let lsgGreen = Color(red: 0, green: 102/255, blue: 51/255)
-    static let gtRed = Color(red: 204/255, green: 0, blue: 51/255)
+    static let gtGray = Color(red: 0.20, green: 0.25, blue: 0.36)
 }

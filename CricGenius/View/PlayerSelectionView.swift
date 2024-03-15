@@ -11,15 +11,13 @@ import SwiftUI
 struct PlayerSelectionView: View {
     @Binding var selectedRole: String?
     let teamData: CricketTeam
-    @Binding var homeTeamPlayers: [Player]
-    @Binding var awayTeamPlayers: [Player]
+    @ObservedObject var selectedPlayersViewModel: SelectedPlayersViewModel
     let selectedTeam: Int
     
-    init(selectedRole: Binding<String?>, teamData: CricketTeam, homeTeamPlayers: Binding<[Player]>, awayTeamPlayers: Binding<[Player]>, selectedTeam: Int) {
+    init(selectedRole: Binding<String?>, teamData: CricketTeam, selectedPlayersViewModel: SelectedPlayersViewModel, selectedTeam: Int) {
         self._selectedRole = selectedRole
         self.teamData = teamData
-        self._homeTeamPlayers = homeTeamPlayers
-        self._awayTeamPlayers = awayTeamPlayers
+        self.selectedPlayersViewModel = selectedPlayersViewModel
         self.selectedTeam = selectedTeam
     }
     
@@ -173,28 +171,28 @@ struct PlayerSelectionView: View {
     
     func playerSelected(player: Player) -> Bool {
         if selectedTeam == 0 {
-            return homeTeamPlayers.contains { $0.id == player.id }
+            return selectedPlayersViewModel.homeTeamPlayers.contains { $0.id == player.id }
         } else {
-            return awayTeamPlayers.contains { $0.id == player.id }
+            return selectedPlayersViewModel.awayTeamPlayers.contains { $0.id == player.id }
         }
     }
     
     func togglePlayerSelection(player: Player) {
         if selectedTeam == 0 {
-            if let index = homeTeamPlayers.firstIndex(where: { $0.id == player.id }) {
-                homeTeamPlayers.remove(at: index)
+            if let index = selectedPlayersViewModel.homeTeamPlayers.firstIndex(where: { $0.id == player.id }) {
+                selectedPlayersViewModel.homeTeamPlayers.remove(at: index)
             } else {
-                guard homeTeamPlayers.count < 11 else { return }
-                homeTeamPlayers.append(player)
-                print("Home Team", homeTeamPlayers)
+                guard selectedPlayersViewModel.homeTeamPlayers.count < 11 else { return }
+                selectedPlayersViewModel.homeTeamPlayers.append(player)
+                print("Home Team", selectedPlayersViewModel.homeTeamPlayers)
             }
         } else {
-            if let index = awayTeamPlayers.firstIndex(where: { $0.id == player.id }) {
-                awayTeamPlayers.remove(at: index)
+            if let index = selectedPlayersViewModel.awayTeamPlayers.firstIndex(where: { $0.id == player.id }) {
+                selectedPlayersViewModel.awayTeamPlayers.remove(at: index)
             } else {
-                guard awayTeamPlayers.count < 11 else { return }
-                awayTeamPlayers.append(player)
-                print("Away Team", awayTeamPlayers)
+                guard selectedPlayersViewModel.awayTeamPlayers.count < 11 else { return }
+                selectedPlayersViewModel.awayTeamPlayers.append(player)
+                print("Away Team", selectedPlayersViewModel.awayTeamPlayers)
             }
         }
     }
