@@ -23,11 +23,11 @@ struct PlayerSelectionView: View {
     
     var body: some View {
         VStack {
-            HStack(spacing: 8) {
+            HStack(spacing: 4) {
                 Button(action: {
                     self.selectedRole = "WK"
                 }) {
-                    Text("WK(\(teamData.wicketKeeperCount))")
+                    Text("WK(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "WK" || $0.role == "WK-Batsman" }.count)/\(teamData.wicketKeeperCount))")
                         .font(.system(size: 16))
                         .bold()
                         .foregroundColor(self.selectedRole == "WK" ?  Color(teamData.teamColor) : .white)
@@ -38,7 +38,7 @@ struct PlayerSelectionView: View {
                 Button(action: {
                     self.selectedRole = "BAT"
                 }) {
-                    Text("BAT(\(teamData.batsmanCount))")
+                    Text("BAT(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "Batsman" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "Batsman" }.count)/\(teamData.batsmanCount))")
                         .font(.system(size: 16))
                         .bold()
                         .foregroundColor(self.selectedRole == "BAT" ?  Color(teamData.teamColor) : .white)
@@ -49,7 +49,7 @@ struct PlayerSelectionView: View {
                 Button(action: {
                     self.selectedRole = "AR"
                 }) {
-                    Text("AR(\(teamData.allRounderCount))")
+                    Text("AR(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "All-rounder" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "All-rounder" }.count)/\(teamData.allRounderCount))")
                         .font(.system(size: 16))
                         .bold()
                         .foregroundColor(self.selectedRole == "AR" ?  Color(teamData.teamColor) : .white)
@@ -60,14 +60,14 @@ struct PlayerSelectionView: View {
                 Button(action: {
                     self.selectedRole = "BOWL"
                 }) {
-                    Text("BOWL(\(teamData.bowlerCount))")
+                    Text("BOWL(\(selectedTeam == 0 ? selectedPlayersViewModel.homeTeamPlayers.filter { $0.role == "Bowler" }.count : selectedPlayersViewModel.awayTeamPlayers.filter { $0.role == "Bowler" }.count)/\(teamData.bowlerCount))")
                         .font(.system(size: 16))
                         .bold()
                         .foregroundColor(self.selectedRole == "BOWL" ?  Color(teamData.teamColor) : .white)
                 }
             }
             .padding(.top, -10)
-            .padding(.horizontal, 20)
+            .padding(.horizontal, 8)
             
             HStack {
                 Text("Player")

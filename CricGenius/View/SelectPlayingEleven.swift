@@ -23,7 +23,7 @@ struct SelectPlayingEleven: View {
     }
     
     var body: some View {
-        VStack(alignment: .center) {
+        VStack {
             VStack {
                 Image(teamData.flagImage)
                     .resizable()
@@ -41,15 +41,12 @@ struct SelectPlayingEleven: View {
             .shadow(color: Color(teamData.teamColor).opacity(0.8), radius: 12, x: 0, y: 4)
             .frame(maxWidth: .infinity)
             
-            VStack {
-                TeamSelectionView(selectedTeam: $selectedTeam, matchSchedule: matchSchedule, teamData: teamData)
-                PlayerSelectionView(selectedRole: $selectedRole, teamData: teamData, selectedPlayersViewModel: selectedPlayersViewModel, selectedTeam: selectedTeam)
-                    .padding(.top, 50)
-            }
+            TeamSelectionView(selectedTeam: $selectedTeam, matchSchedule: matchSchedule, teamData: teamData)
+            PlayerSelectionView(selectedRole: $selectedRole, teamData: teamData, selectedPlayersViewModel: selectedPlayersViewModel, selectedTeam: selectedTeam)
             
             Spacer()
             
-            VStack {
+            HStack {
                 GeometryReader { geometry in
                     HStack(spacing: 0) {
                         NavigationLink(destination: UpcomingMatchDetailView(matchSchedule: matchSchedule)) {
@@ -95,6 +92,8 @@ struct SelectPlayingEleven: View {
         .padding(.top, 50)
         .background(Color(red: 0.13, green: 0.13, blue: 0.19))
         .ignoresSafeArea()
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
     
     func playerSelected(player: Player) -> Bool {
